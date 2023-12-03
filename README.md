@@ -9,3 +9,9 @@
 * [Hello world](ch01/hello.py)
 * [What's your name](ch01/whats_your_name.py)
 * [绘制三角形](ch01/draw_triangle.py)
+
+## 第2章 列表和元组
+* [代码清单2-1 索引示例](ch02/indexing_example.py)
+* [代码清单2-2 切片示例](ch02/slicing_example.py)
+* [代码清单2-3 序列乘法示例](ch02/sequence_multiplication_example.py)
+* [代码清单2-4 序列成员资格示例](ch02/sequence_membership_example.py)
