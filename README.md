@@ -4,6 +4,13 @@
 * 本书网站：<https://folk.idi.ntnu.no/mlh/hetland_org/writing/beginning-python-2/>
 * 笔记：<https://zzy979.github.io/posts/python-note-index/>
 
+# 单元测试
+在项目根目录下执行：
+
+```shell
+python -m unittest
+```
+
 # 代码目录
 ## 第1章 基础知识
 * [Hello world](ch01/hello.py)
