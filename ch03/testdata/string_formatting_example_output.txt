@@ -1,0 +1,9 @@
+Please enter width: ===================================
+Item                          Price
+-----------------------------------
+Apples                         0.40
+Pears                          0.50
+Cantaloupes                    1.92
+Dried Apricots (16 oz.)        8.00
+Prunes (4 lbs.)               12.00
+===================================

@@ -22,3 +22,6 @@ python -m unittest
 * [代码清单2-2 切片示例](ch02/slicing_example.py)
 * [代码清单2-3 序列乘法示例](ch02/sequence_multiplication_example.py)
 * [代码清单2-4 序列成员资格示例](ch02/sequence_membership_example.py)
+
+## 第3章 使用字符串
+* [代码清单3-1 字符串格式化示例](ch03/string_formatting_example.py)
