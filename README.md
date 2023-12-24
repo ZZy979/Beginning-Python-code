@@ -25,3 +25,7 @@ python -m unittest
 
 ## 第3章 使用字符串
 * [代码清单3-1 字符串格式化示例](ch03/string_formatting_example.py)
+
+## 第4章 字典：当索引行不通时
+* [代码清单4-1 字典示例](ch04/dictionary_example.py)
+* [代码清单4-2 字典方法示例](ch04/dictionary_method_example.py)
