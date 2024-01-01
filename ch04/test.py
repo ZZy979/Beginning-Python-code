@@ -16,7 +16,7 @@ class Ch04Tests(test_utils.TestCase):
             ('Earl\np\n', '')
         ]
         for input, output in test_cases:
-            self.assertScriptOutput('dictionary_example.py', input=input, output=prompt + output)
+            self.assertScriptOutput('dictionary_example.py', input=input, prompt=prompt, output=output)
 
     def test_dictionary_method_example(self):
         prompt = 'Name: Phone number (p) or address (a)? '
@@ -28,4 +28,4 @@ class Ch04Tests(test_utils.TestCase):
             ('Gumby\nbatting average\n', "Gumby's batting average is not available.\n")
         ]
         for input, output in test_cases:
-            self.assertScriptOutput('dictionary_method_example.py', input=input, output=prompt + output)
+            self.assertScriptOutput('dictionary_method_example.py', input=input, prompt=prompt, output=output)

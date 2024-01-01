@@ -13,5 +13,6 @@ class Ch01Tests(test_utils.TestCase):
 
     def test_whats_your_name(self):
         self.assertScriptOutput(
-            'whats_your_name.py', input='Gumby', output='What is your name? Hello, Gumby!\n'
+            'whats_your_name.py', input='Gumby',
+            prompt='What is your name? ', output='Hello, Gumby!\n'
         )

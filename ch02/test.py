@@ -11,13 +11,13 @@ class Ch02Tests(test_utils.TestCase):
     def test_indexing_example(self):
         self.assertScriptOutput(
             'indexing_example.py', input='1974\n8\n16',
-            output='Year: Month (1-12): Day (1-31): August 16th, 1974\n'
+            prompt='Year: Month (1-12): Day (1-31): ', output='August 16th, 1974\n'
         )
 
     def test_slicing_example(self):
         self.assertScriptOutput(
             'slicing_example.py', input='http://www.python.org',
-            output='Please enter the URL: Domain name: python\n'
+            prompt='Please enter the URL: ', output='Domain name: python\n'
         )
 
     def test_sequence_multiplication_example(self):
@@ -28,9 +28,10 @@ class Ch02Tests(test_utils.TestCase):
         )
 
     def test_sequence_membership_example(self):
+        prompt = 'User name: PIN code: '
         test_cases = [
-            ('smith\n7524\n', 'User name: PIN code: Access granted\n'),
-            ('smith\n1234\n', 'User name: PIN code: '),
+            ('smith\n7524\n', 'Access granted\n'),
+            ('smith\n1234\n', ''),
         ]
         for input, output in test_cases:
-            self.assertScriptOutput('sequence_membership_example.py', input=input, output=output)
+            self.assertScriptOutput('sequence_membership_example.py', input=input, prompt=prompt, output=output)
