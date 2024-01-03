@@ -29,3 +29,13 @@ python -m unittest
 ## 第4章 字典：当索引行不通时
 * [代码清单4-1 字典示例](ch04/dictionary_example.py)
 * [代码清单4-2 字典方法示例](ch04/dictionary_method_example.py)
+
+## 第5章 条件、循环和其他语句
+* [if语句示例](ch05/if_statement_example.py)
+* [else子句示例](ch05/else_clause_example.py)
+* [elif子句示例](ch05/elif_clause_example.py)
+* [嵌套代码块示例](ch05/nested_blocks_example.py)
+* [while语句示例](ch05/while_statement_example.py)
+* [break语句示例](ch05/break_statement_example.py)
+* [while True/break示例](ch05/while_true_break_idiom_example.py)
+* [循环中的else子句示例](ch05/else_clause_in_loop_example.py)
