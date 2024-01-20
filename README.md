@@ -39,3 +39,10 @@ python -m unittest
 * [break语句示例](ch05/break_statement_example.py)
 * [while True/break示例](ch05/while_true_break_idiom_example.py)
 * [循环中的else子句示例](ch05/else_clause_in_loop_example.py)
+
+## 第6章 抽象
+* [简单联系人应用](ch06/simple_contacts.py)
+* [参数练习](ch06/parameter_practice.py)
+* [阶乘](ch06/factorial.py)
+* [幂](ch06/power.py)
+* [二分查找](ch06/binary_search.py)

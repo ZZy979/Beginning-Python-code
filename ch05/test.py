@@ -74,7 +74,7 @@ class Ch05Tests(test_utils.TestCase):
         ]
         for input, n, output, error in test_cases:
             result = self.run_script(script, input=input)
-            self.assertEqual(result.stdout, prompt * n + output)
+            self.assertEqual(prompt * n + output, result.stdout)
             if error:
                 self.assertIn(error, result.stderr)
 
