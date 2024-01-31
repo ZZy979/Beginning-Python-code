@@ -46,3 +46,10 @@ python -m unittest
 * [阶乘](ch06/factorial.py)
 * [幂](ch06/power.py)
 * [二分查找](ch06/binary_search.py)
+
+## 第7章 再谈抽象
+* [多态示例](ch07/polymorphism_example.py)
+* [自定义类示例](ch07/person.py)
+* [类命名空间示例](ch07/member_counter.py)
+* [超类示例](ch07/filters.py)
+* [多个超类示例](ch07/talking_calculator.py)

@@ -1,8 +1,6 @@
 import pathlib
 
 import test_utils
-from ch06.parameter_practice import *
-from ch06.simple_contacts import *
 
 
 class Ch06Tests(test_utils.TestCase):
@@ -11,6 +9,8 @@ class Ch06Tests(test_utils.TestCase):
         self.dir = pathlib.Path(__file__).resolve().parent
 
     def test_simple_contacts(self):
+        from ch06.simple_contacts import init, store, lookup
+
         names = {}
         init(names)
         self.assertEqual({'first': {}, 'middle': {}, 'last': {}}, names)
@@ -30,6 +30,8 @@ class Ch06Tests(test_utils.TestCase):
         self.assertEqual(['Robin Hood', 'Robin Locksley', 'Mr. Gumby'], lookup(names, 'middle', ''))
 
     def test_parameter_practice_story(self):
+        from ch06.parameter_practice import story
+
         self.assertEqual('Once upon a time, there was a king called Gumby.', story(job='king', name='Gumby'))
         self.assertEqual(
             'Once upon a time, there was a brave knight called Sir Robin.',
@@ -44,6 +46,8 @@ class Ch06Tests(test_utils.TestCase):
             story(job='stroke of genius', **params))
 
     def test_parameter_practice_power(self):
+        from ch06.parameter_practice import power
+
         self.assertEqual(8, power(2, 3))
         self.assertEqual(9, power(3, 2))
         self.assertEqual(8, power(y=3, x=2))
@@ -54,6 +58,8 @@ class Ch06Tests(test_utils.TestCase):
         self.assertEqual(27, power(3, 3, 'Hello, world'))
 
     def test_parameter_practice_interval(self):
+        from ch06.parameter_practice import interval, power
+
         self.assertEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], interval(10))
         self.assertEqual([1, 2, 3, 4], interval(1, 5))
         self.assertEqual([3, 7, 11], interval(3, 12, 4))
