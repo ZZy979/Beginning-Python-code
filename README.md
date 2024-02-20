@@ -53,3 +53,9 @@ python -m unittest
 * [类命名空间示例](ch07/member_counter.py)
 * [超类示例](ch07/filters.py)
 * [多个超类示例](ch07/talking_calculator.py)
+
+## 第8章 异常
+* [异常示例](ch08/exception_example.py)
+* [无参数raise示例](ch08/muffled_calculator.py)
+* [多个except子句示例](ch08/except_clause_example.py)
+* [try语句else子句示例](ch08/try_else_clause_example.py)
