@@ -59,3 +59,14 @@ python -m unittest
 * [无参数raise示例](ch08/muffled_calculator.py)
 * [多个except子句示例](ch08/except_clause_example.py)
 * [try语句else子句示例](ch08/try_else_clause_example.py)
+
+## 第9章 魔法方法、特性和迭代器
+* [算术序列](ch09/arithseq.py)
+* [带访问计数器的列表](ch09/counter_list.py)
+* [property示例](ch09/rectangle_property.py)
+* [\_\_getattr\_\_示例](ch09/rectangle_getattr.py)
+* [迭代器示例](ch09/fibonacci_iterator.py)
+* [从迭代器创建序列示例](ch09/test_iterator.py)
+* [递归生成器示例](ch09/flatten.py)
+* [模拟生成器示例](ch09/non_generator_flatten.py)
+* [八皇后问题](ch09/queens.py)
