@@ -1,0 +1,17 @@
+?
+store
+001
+Mr. Gumby
+42
+555-1234
+store
+002
+Alice
+20
+333-5678
+store
+003
+Bob
+25
+888-8431
+quit

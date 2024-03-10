@@ -1,0 +1,6 @@
+Enter command (? for help): The available commands are:
+store  : Stores information about a person
+lookup : Looks up a person from ID number
+quit   : Save changes and exit
+?      : Prints this message
+Enter command (? for help): Enter unique ID number: Enter name: Enter age: Enter phone number: Enter command (? for help): Enter unique ID number: Enter name: Enter age: Enter phone number: Enter command (? for help): Enter unique ID number: Enter name: Enter age: Enter phone number: Enter command (? for help): 

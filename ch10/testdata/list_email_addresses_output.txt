@@ -1,0 +1,4 @@
+Mr.Gumby@bar.baz
+foo@bar.baz
+foo@baz.com
+magnus@bozz.floop

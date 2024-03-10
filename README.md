@@ -70,3 +70,17 @@ python -m unittest
 * [递归生成器示例](ch09/flatten.py)
 * [模拟生成器示例](ch09/non_generator_flatten.py)
 * [八皇后问题](ch09/queens.py)
+
+## 第10章 自带电池
+* [代码清单10-4 带有条件测试代码的模块](ch10/hello4.py)
+* [包示例](ch10/drawing)
+* [代码清单10-5 反序打印命令行参数](ch10/reverseargs.py)
+* [代码清单10-6 给Python脚本添加行号](ch10/numberlines.py)
+* [随机时间](ch10/random_time.py)
+* [掷骰子](ch10/throw_dice.py)
+* [随机谚语](ch10/random_fortune.py)
+* [随机发牌](ch10/deal_cards.py)
+* [代码清单10-8 简单的数据库应用](ch10/database.py)
+* [代码清单10-10 查找发件人](ch10/find_sender.py)
+* [列出邮件地址](ch10/list_email_addresses.py)
+* [一个模板系统](ch10/templates.py)

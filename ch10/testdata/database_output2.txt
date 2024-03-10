@@ -1,0 +1,8 @@
+Enter command (? for help): Enter ID number: What would you like to know? (name, age, phone) Phone: 555-1234
+Enter command (? for help): Enter ID number: What would you like to know? (name, age, phone) Name: Alice
+Enter command (? for help): Enter ID number: What would you like to know? (name, age, phone) Age: 25
+Enter command (? for help): Enter ID number: ID 004 doesn't exist
+Enter command (? for help): Unknown command: delete
+Enter command (? for help): Enter unique ID number: Enter name: Enter age: Enter phone number: Enter command (? for help): Enter ID number: What would you like to know? (name, age, phone) Age: 22
+Enter command (? for help): Enter ID number: What would you like to know? (name, age, phone) Phone: 333-8765
+Enter command (? for help): 
