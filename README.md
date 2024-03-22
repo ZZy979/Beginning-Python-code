@@ -87,3 +87,6 @@ python -m unittest
 
 ## 第11章 文件
 * [代码清单11-1 单词计数](ch11/wordcount.py)
+
+## 第12章 图形用户界面
+* [代码清单12-1 简单文本编辑器](ch12/text_editor.py)
