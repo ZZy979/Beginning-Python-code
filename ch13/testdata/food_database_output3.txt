@@ -1,0 +1,650 @@
+SELECT * FROM food WHERE desc LIKE 'CHICKEN%' AND fat >= 5 AND fat < 10 ORDER BY protein DESC
+id: 05130
+desc: CHICKEN,STEWING,LT MEAT,MEAT ONLY,CKD,STWD
+water: 57.79
+kcal: 213.0
+protein: 33.04
+fat: 7.98
+ash: 1.19
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05040
+desc: CHICKEN,BROILERS OR FRYERS,LT MEAT,MEAT ONLY,CKD,FRIED
+water: 60.14
+kcal: 192.0
+protein: 32.82
+fat: 5.54
+ash: 1.09
+carbs: 0.42
+fiber: 0.0
+sugar: 0.0
+
+id: 05059
+desc: CHICKEN,BROILERS OR FRYERS,BREAST,MEAT&SKN,CKD,FRIED,FLR
+water: 56.59
+kcal: 222.0
+protein: 31.84
+fat: 8.87
+ash: 1.06
+carbs: 1.64
+fiber: 0.1
+sugar: 0.0
+
+id: 05012
+desc: CHICKEN,BROILERS OR FRYERS,MEAT ONLY,CKD,FRIED
+water: 57.53
+kcal: 219.0
+protein: 30.57
+fat: 9.12
+ash: 1.09
+carbs: 1.69
+fiber: 0.1
+sugar: 0.0
+
+id: 05107
+desc: CHICKEN,BROILERS OR FRYERS,WING,MEAT ONLY,CKD,RSTD
+water: 62.78
+kcal: 203.0
+protein: 30.46
+fat: 8.13
+ash: 0.89
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05106
+desc: CHICKEN,BROILERS OR FRYERS,WING,MEAT ONLY,CKD,FRIED
+water: 59.83
+kcal: 211.0
+protein: 30.15
+fat: 9.15
+ash: 0.87
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05060
+desc: CHICKEN,BROILERS OR FRYERS,BREAST,MEAT&SKN,CKD,RSTD
+water: 62.44
+kcal: 197.0
+protein: 29.8
+fat: 7.78
+ash: 0.99
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05013
+desc: CHICKEN,BROILERS OR FRYERS,MEAT ONLY,RSTD
+water: 63.79
+kcal: 190.0
+protein: 28.93
+fat: 7.41
+ash: 1.02
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05343
+desc: CHICKEN,BROILERS OR FRYERS,DRUMSTK,MEAT ONLY,CKD,ROTISSERIE,
+water: 63.05
+kcal: 176.0
+protein: 28.74
+fat: 6.81
+ash: 1.91
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05072
+desc: CHICKEN,BROILERS OR FRYERS,DRUMSTK,MEAT ONLY,CKD,FRIED
+water: 62.24
+kcal: 195.0
+protein: 28.62
+fat: 8.08
+ash: 1.06
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05081
+desc: CHICKEN,BROILERS OR FRYERS,LEG,MEAT ONLY,CKD,FRIED
+water: 60.61
+kcal: 208.0
+protein: 28.38
+fat: 9.32
+ash: 1.05
+carbs: 0.65
+fiber: 0.0
+sugar: 0.0
+
+id: 05339
+desc: CHICKEN,BROILER,ROTISSERIE,BBQ,WING,MEAT ONLY
+water: 62.87
+kcal: 184.0
+protein: 28.34
+fat: 7.79
+ash: 0.98
+carbs: 0.54
+fiber: 0.0
+sugar: 0.53
+
+id: 05319
+desc: CHICKEN,BROILER,ROTISSERIE,BBQ,DRUMSTK,MEAT ONLY
+water: 64.11
+kcal: 172.0
+protein: 27.71
+fat: 6.76
+ash: 1.8
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05346
+desc: CHICKEN,BROILERS OR FRYERS,WING,MEAT ONLY,CKD,ROTISSERIE,ORI
+water: 61.13
+kcal: 197.0
+protein: 27.69
+fat: 9.53
+ash: 2.65
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05074
+desc: CHICKEN,BROILERS OR FRYERS,DRUMSTK,MEAT ONLY,CKD,STWD
+water: 67.58
+kcal: 169.0
+protein: 27.5
+fat: 5.71
+ash: 0.91
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05348
+desc: CHICKEN,BROILERS OR FRYERS,BREAST,MEAT & SKN,CKD,ROTISSERIE,
+water: 63.49
+kcal: 184.0
+protein: 27.48
+fat: 8.18
+ash: 1.72
+carbs: 0.02
+fiber: 0.0
+sugar: 0.02
+
+id: 05061
+desc: CHICKEN,BROILERS OR FRYERS,BREAST,MEAT&SKN,CKD,STWD
+water: 66.21
+kcal: 184.0
+protein: 27.39
+fat: 7.42
+ash: 0.84
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05045
+desc: CHICKEN,BROILERS OR FRYERS,DK MEAT,MEAT ONLY,CKD,RSTD
+water: 63.06
+kcal: 205.0
+protein: 27.37
+fat: 9.73
+ash: 1.02
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05014
+desc: CHICKEN,BROILERS OR FRYERS,MEAT ONLY,STWD
+water: 66.81
+kcal: 177.0
+protein: 27.29
+fat: 6.71
+ash: 0.85
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05108
+desc: CHICKEN,BROILERS OR FRYERS,WING,MEAT ONLY,CKD,STWD
+water: 67.01
+kcal: 181.0
+protein: 27.18
+fat: 7.18
+ash: 0.73
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05116
+desc: CHICKEN,ROASTING,GIBLETS,CKD,SIMMRD
+water: 66.32
+kcal: 165.0
+protein: 26.77
+fat: 5.22
+ash: 0.83
+carbs: 0.86
+fiber: 0.0
+sugar: 0.0
+
+id: 05026
+desc: CHICKEN,HEART,ALL CLASSES,CKD,SIMMRD
+water: 64.85
+kcal: 185.0
+protein: 26.41
+fat: 7.92
+ash: 0.72
+carbs: 0.1
+fiber: 0.0
+sugar: 0.0
+
+id: 05138
+desc: CHICKEN,CAPONS,GIBLETS,CKD,SIMMRD
+water: 66.54
+kcal: 164.0
+protein: 26.39
+fat: 5.4
+ash: 0.91
+carbs: 0.76
+fiber: 0.0
+sugar: 0.0
+
+id: 05358
+desc: CHICKEN,BROILER,ROTISSERIE,BBQ,BREAST MEAT & SKN
+water: 65.19
+kcal: 175.0
+protein: 26.37
+fat: 7.67
+ash: 1.42
+carbs: 0.09
+fiber: 0.0
+sugar: 0.09
+
+id: 05083
+desc: CHICKEN,BROILERS OR FRYERS,LEG,MEAT ONLY,CKD,STWD
+water: 66.44
+kcal: 185.0
+protein: 26.26
+fat: 8.06
+ash: 0.88
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05033
+desc: CHICKEN,BROILERS OR FRYERS,LT MEAT,MEAT&SKN,CKD,STWD
+water: 65.13
+kcal: 201.0
+protein: 26.14
+fat: 9.97
+ash: 0.78
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05046
+desc: CHICKEN,BROILERS OR FRYERS,DK MEAT,MEAT ONLY,CKD,STWD
+water: 65.83
+kcal: 192.0
+protein: 25.97
+fat: 8.98
+ash: 0.84
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05661
+desc: CHICKEN,LIVER,ALL CLASSES,CKD,PAN-FRIED
+water: 65.22
+kcal: 172.0
+protein: 25.78
+fat: 6.43
+ash: 1.47
+carbs: 1.11
+fiber: 0.0
+sugar: 0.0
+
+id: 05128
+desc: CHICKEN,STEWING,GIBLETS,CKD,SIMMRD
+water: 64.0
+kcal: 194.0
+protein: 25.73
+fat: 9.3
+ash: 0.87
+carbs: 0.11
+fiber: 0.0
+sugar: 0.0
+
+id: 05679
+desc: CHICKEN,DK MEAT,DRUMSTK,MEAT ONLY,W/ ADDED SOLN,CKD,RSTD
+water: 69.5
+kcal: 146.0
+protein: 25.34
+fat: 5.0
+ash: 1.19
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05311
+desc: CHICKEN,CANNED,NO BROTH
+water: 64.9
+kcal: 185.0
+protein: 25.3
+fat: 8.1
+ash: 0.8
+carbs: 0.9
+fiber: 0.0
+sugar: 0.0
+
+id: 05114
+desc: CHICKEN,ROASTING,MEAT ONLY,CKD,RSTD
+water: 67.41
+kcal: 167.0
+protein: 25.01
+fat: 6.63
+ash: 0.95
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05099
+desc: CHICKEN,BROILERS OR FRYERS,THIGH,MEAT ONLY,CKD,STWD
+water: 65.59
+kcal: 195.0
+protein: 25.0
+fat: 9.79
+ash: 0.86
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05098
+desc: CHICKEN,BROILERS OR FRYERS,THIGH,MEAT ONLY,CKD,RSTD
+water: 67.0
+kcal: 179.0
+protein: 24.76
+fat: 8.15
+ash: 1.04
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05689
+desc: CHICKEN,DK MEAT,DRUMSTK,MEAT & SKN,W/ ADDED SOLN,CKD,RSTD
+water: 65.97
+kcal: 180.0
+protein: 24.72
+fat: 9.0
+ash: 1.16
+carbs: 0.05
+fiber: 0.0
+sugar: 0.0
+
+id: 05090
+desc: CHICKEN,BROILERS OR FRYERS,NECK,MEAT ONLY,CKD,SIMMRD
+water: 67.05
+kcal: 179.0
+protein: 24.56
+fat: 8.18
+ash: 0.77
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05672
+desc: CHICKEN,BROILERS OR FRYERS,DK MEAT,THIGH,MEAT ONLY,CKD,BRSD
+water: 66.87
+kcal: 176.0
+protein: 24.55
+fat: 8.63
+ash: 0.99
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05028
+desc: CHICKEN,LIVER,ALL CLASSES,CKD,SIMMRD
+water: 66.81
+kcal: 167.0
+protein: 24.46
+fat: 6.51
+ash: 1.36
+carbs: 0.87
+fiber: 0.0
+sugar: 0.0
+
+id: 05073
+desc: CHICKEN,BROILERS OR FRYERS,DK MEAT,DRUMSTK,MEAT ONLY,CKD,RST
+water: 69.93
+kcal: 155.0
+protein: 24.24
+fat: 5.7
+ash: 1.06
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05683
+desc: CHICKEN,DK MEAT,THIGH,MEAT ONLY,W/ ADDED SOLN,CKD,RSTD
+water: 67.86
+kcal: 164.0
+protein: 24.23
+fat: 7.73
+ash: 1.19
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05082
+desc: CHICKEN,BROILERS OR FRYERS,LEG,MEAT ONLY,CKD,RSTD
+water: 67.69
+kcal: 174.0
+protein: 24.22
+fat: 7.8
+ash: 1.04
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05078
+desc: CHICKEN,BROILERS OR FRYERS,LEG,MEAT&SKN,CKD,RSTD
+water: 66.74
+kcal: 184.0
+protein: 24.03
+fat: 8.99
+ash: 1.02
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05671
+desc: CHICKEN,BROILERS OR FRYERS,DK MEAT,DRUMSTK,MEAT OLY,CKD,BRSD
+water: 69.94
+kcal: 149.0
+protein: 23.93
+fat: 5.95
+ash: 0.98
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05120
+desc: CHICKEN,ROASTING,DK MEAT,MEAT ONLY,CKD,RSTD
+water: 67.05
+kcal: 178.0
+protein: 23.25
+fat: 8.75
+ash: 0.94
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05681
+desc: CHICKEN,DK MEAT,THIGH,MEAT ONLY,W/ ADDED SOLN,CKD,BRSD
+water: 68.62
+kcal: 164.0
+protein: 23.0
+fat: 7.96
+ash: 1.19
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05680
+desc: CHICKEN,DK MEAT,DRUMSTK,MEAT ONLY,W/ ADDED SOLN,CKD,BRSD
+water: 70.18
+kcal: 149.0
+protein: 22.99
+fat: 6.33
+ash: 1.13
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05277
+desc: CHICKEN,CND,MEAT ONLY,W/BROTH
+water: 68.65
+kcal: 165.0
+protein: 21.77
+fat: 7.95
+ash: 1.81
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05125
+desc: CHICKEN,STEWING,MEAT ONLY,RAW
+water: 72.54
+kcal: 148.0
+protein: 21.26
+fat: 6.32
+ash: 1.27
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05057
+desc: CHICKEN,BROILERS OR FRYERS,BREAST,MEAT&SKN,RAW
+water: 69.46
+kcal: 172.0
+protein: 20.85
+fat: 9.25
+ash: 1.01
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05131
+desc: CHICKEN,STEWING,DK MEAT,MEAT ONLY,RAW
+water: 71.94
+kcal: 157.0
+protein: 19.7
+fat: 8.12
+ash: 1.41
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05053
+desc: CHICKEN,BROILERS OR FRYERS,BACK,MEAT ONLY,RAW
+water: 75.31
+kcal: 137.0
+protein: 19.56
+fat: 5.92
+ash: 0.92
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05137
+desc: CHICKEN,CAPONS,GIBLETS,RAW
+water: 74.12
+kcal: 130.0
+protein: 18.28
+fat: 5.18
+ash: 1.0
+carbs: 1.42
+fiber: 0.0
+sugar: 0.0
+
+id: 05115
+desc: CHICKEN,ROASTING,GIBLETS,RAW
+water: 74.73
+kcal: 127.0
+protein: 18.14
+fat: 5.04
+ash: 0.95
+carbs: 1.14
+fiber: 0.0
+sugar: 0.0
+
+id: 05066
+desc: CHICKEN,BROILERS OR FRYERS,DRUMSTK,MEAT&SKN,RAW
+water: 72.46
+kcal: 161.0
+protein: 18.08
+fat: 9.2
+ash: 0.86
+carbs: 0.11
+fiber: 0.0
+sugar: 0.0
+
+id: 05688
+desc: CHICKEN,DK MEAT,DRUMSTK,MEAT & SKN,W/ ADDED SOLN,RAW
+water: 73.79
+kcal: 146.0
+protein: 18.03
+fat: 8.24
+ash: 0.94
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05127
+desc: CHICKEN,STEWING,GIBLETS,RAW
+water: 69.8
+kcal: 168.0
+protein: 17.89
+fat: 9.21
+ash: 0.97
+carbs: 2.13
+fiber: 0.0
+sugar: 0.0
+
+id: 05088
+desc: CHICKEN,BROILERS OR FRYERS,NECK,MEAT ONLY,RAW
+water: 71.17
+kcal: 154.0
+protein: 17.55
+fat: 8.78
+ash: 0.69
+carbs: 0.0
+fiber: 0.0
+sugar: 0.0
+
+id: 05332
+desc: CHICKEN,GROUND,RAW
+water: 73.24
+kcal: 143.0
+protein: 17.44
+fat: 8.1
+ash: 1.17
+carbs: 0.04
+fiber: 0.0
+sugar: 0.0
+
+id: 05025
+desc: CHICKEN,HEART,ALL CLASSES,RAW
+water: 73.56
+kcal: 153.0
+protein: 15.55
+fat: 9.33
+ash: 0.85
+carbs: 0.71
+fiber: 0.0
+sugar: 0.0
+

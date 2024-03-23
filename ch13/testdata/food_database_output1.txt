@@ -1,0 +1,12 @@
+SELECT * FROM food WHERE id = '01105'
+id: 01105
+desc: MILK,CHOC BEV,HOT COCOA,HOMEMADE
+water: 82.45
+kcal: 77.0
+protein: 3.52
+fat: 2.34
+ash: 0.65
+carbs: 10.74
+fiber: 1.0
+sugar: 9.66
+

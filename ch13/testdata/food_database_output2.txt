@@ -1,0 +1,45 @@
+SELECT * FROM food WHERE kcal <= 100 AND fiber >= 10 ORDER BY sugar
+id: 09216
+desc: ORANGE PEEL,RAW
+water: 72.5
+kcal: 97.0
+protein: 1.5
+fat: 0.2
+ash: 0.8
+carbs: 25.0
+fiber: 10.6
+sugar: 0.0
+
+id: 09156
+desc: LEMON PEEL,RAW
+water: 81.6
+kcal: 47.0
+protein: 1.5
+fat: 0.3
+ash: 0.6
+carbs: 16.0
+fiber: 10.6
+sugar: 4.17
+
+id: 11974
+desc: GRAPE LEAVES,RAW
+water: 73.32
+kcal: 93.0
+protein: 5.6
+fat: 2.12
+ash: 1.65
+carbs: 17.31
+fiber: 11.0
+sugar: 6.3
+
+id: 09231
+desc: PASSION-FRUIT,(GRANADILLA),PURPLE,RAW
+water: 72.93
+kcal: 97.0
+protein: 2.2
+fat: 0.7
+ash: 0.8
+carbs: 23.38
+fiber: 10.4
+sugar: 11.2
+
