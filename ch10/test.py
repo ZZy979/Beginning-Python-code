@@ -107,7 +107,7 @@ class Ch10Tests(test_utils.TestCase):
                 input_file=test_dir / f'database_input{i}.txt',
                 output_file=test_dir / f'database_output{i}.txt')
 
-        for f in glob.glob('database.dat.*', root_dir=test_dir):
+        for f in glob.glob('database.dat*', root_dir=test_dir):
             os.remove(test_dir / f)
 
     def test_find_sender(self):
