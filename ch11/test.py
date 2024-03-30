@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch11Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch11'
 
     def test_wordcount(self):
         self.assertScriptOutput(

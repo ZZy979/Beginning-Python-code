@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch07Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch07'
 
     def test_polymorphism_example_count(self):
         from ch07.polymorphism_example import count

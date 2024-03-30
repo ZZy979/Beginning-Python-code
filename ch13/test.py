@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch13Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch13'
 
     def test_food_database(self):
         import os

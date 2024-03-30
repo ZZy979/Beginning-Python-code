@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch09Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch09'
 
     def test_arithseq(self):
         from ch09.arithseq import ArithmeticSequence

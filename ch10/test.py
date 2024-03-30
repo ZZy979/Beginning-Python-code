@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch10Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch10'
 
     def test_hello4(self):
         self.assertScriptOutput('hello4.py', output='Hello, world!\n')

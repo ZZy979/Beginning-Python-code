@@ -1,9 +1,16 @@
+import pathlib
 import shlex
 import subprocess
+import sys
 import unittest
 
 
 class TestCase(unittest.TestCase):
+    dirname = ''
+
+    def setUp(self):
+        self.root_dir = pathlib.Path(__file__).resolve().parent
+        self.dir = self.root_dir / self.dirname
 
     def run_script(self, script, args='', input=None, input_file=None, cwd=None):
         """运行指定的脚本，返回subprocess.CompletedProcess对象。
@@ -15,20 +22,11 @@ class TestCase(unittest.TestCase):
         :param cwd: str 当前工作目录，默认为self.dir
         :return: subprocess.CompletedProcess对象
         """
-        if input is not None:
-            stdin = None
-        elif input_file:
-            stdin = open(input_file, encoding='utf-8')
-        else:
-            stdin = subprocess.DEVNULL
-
-        if cwd is None and hasattr(self, 'dir'):
-            cwd = self.dir
-
-        cmd = ['python', script, *shlex.split(args)]
+        stdin = _prepare_stdin(input, input_file)
+        cmd = [sys.executable, script, *shlex.split(args)]
         result = subprocess.run(
             cmd, stdin=stdin, input=input, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-            cwd=cwd, encoding='utf-8', text=True)
+            cwd=self.get_cwd(cwd), encoding='utf-8', text=True)
         if input_file:
             stdin.close()
 
@@ -48,13 +46,28 @@ class TestCase(unittest.TestCase):
         :param output_file: str 期望输出文件名，如果未指定output参数则与该文件比较输出，如果该参数也未指定则期望无输出
         :param cwd: str 当前工作目录，默认为self.dir
         """
-        if output is not None:
-            expected_output = (prompt or '') + output
-        elif output_file:
-            with open(output_file, encoding='utf-8') as f:
-                expected_output = f.read()
-        else:
-            expected_output = ''
-
+        expected_output = _prepare_expected_output(prompt, output, output_file)
         actual_output = self.run_script(script, args, input, input_file, cwd).stdout
         self.assertEqual(expected_output, actual_output)
+
+    def get_cwd(self, cwd=None):
+        return cwd if cwd is not None else self.dir
+
+
+def _prepare_stdin(input, input_file):
+    if input is not None:
+        return None
+    elif input_file:
+        return open(input_file, encoding='utf-8')
+    else:
+        return subprocess.DEVNULL
+
+
+def _prepare_expected_output(prompt, output, output_file):
+    if output is not None:
+        return (prompt or '') + output
+    elif output_file:
+        with open(output_file, encoding='utf-8') as f:
+            return f.read()
+    else:
+        return ''

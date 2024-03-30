@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch04Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch04'
 
     def test_dictionary_example(self):
         prompt = 'Name: Phone number (p) or address (a)? '

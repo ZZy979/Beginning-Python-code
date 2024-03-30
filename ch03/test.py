@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch03Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch03'
 
     def test_string_formatting_example(self):
         self.assertScriptOutput(

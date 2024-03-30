@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch06Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch06'
 
     def test_simple_contacts(self):
         from ch06.simple_contacts import init, store, lookup

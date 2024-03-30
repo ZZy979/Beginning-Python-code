@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch05Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch05'
 
     def test_if_statement_example(self):
         prompt = 'What is your name? '

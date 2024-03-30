@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch02Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch02'
 
     def test_indexing_example(self):
         self.assertScriptOutput(

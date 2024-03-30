@@ -1,12 +1,8 @@
-import pathlib
-
 import test_utils
 
 
 class Ch08Tests(test_utils.TestCase):
-
-    def setUp(self):
-        self.dir = pathlib.Path(__file__).resolve().parent
+    dirname = 'ch08'
 
     def test_exception_example(self):
         prompt = 'Enter the first number: Enter the second number: '
