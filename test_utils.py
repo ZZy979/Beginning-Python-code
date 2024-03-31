@@ -50,6 +50,13 @@ class TestCase(unittest.TestCase):
         actual_output = self.run_script(script, args, input, input_file, cwd).stdout
         self.assertEqual(expected_output, actual_output)
 
+    def popen(self, script, args='', cwd=None):
+        """运行指定的脚本，返回subprocess.Popen对象。"""
+        cmd = [sys.executable, script, *shlex.split(args)]
+        return subprocess.Popen(
+            cmd, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            cwd=self.get_cwd(cwd), encoding='utf-8', text=True)
+
     def get_cwd(self, cwd=None):
         return cwd if cwd is not None else self.dir
 
