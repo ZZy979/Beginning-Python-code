@@ -8,6 +8,8 @@
 在项目根目录下执行：
 
 ```shell
+export PYTHONUNBUFFERED=1
+export PYTHONIOENCODING=UTF-8
 python -m unittest
 ```
 
