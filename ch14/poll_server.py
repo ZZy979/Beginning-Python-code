@@ -16,7 +16,7 @@ p.register(s)
 while True:
     events = p.poll()
     for fd, event in events:
-        if fd in fdmap:
+        if fd == s.fileno():
             c, addr = s.accept()
             print('Got connection from', addr)
             p.register(c)

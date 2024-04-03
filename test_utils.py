@@ -2,6 +2,7 @@ import pathlib
 import shlex
 import subprocess
 import sys
+import time
 import unittest
 
 
@@ -50,12 +51,25 @@ class TestCase(unittest.TestCase):
         actual_output = self.run_script(script, args, input, input_file, cwd).stdout
         self.assertEqual(expected_output, actual_output)
 
-    def popen(self, script, args='', cwd=None):
-        """运行指定的脚本，返回subprocess.Popen对象。"""
-        cmd = [sys.executable, script, *shlex.split(args)]
-        return subprocess.Popen(
+    def run_server(self, server_script, server_args='', wait_time=1, client_func=None, cwd=None):
+        """运行指定的服务器脚本，之后调用客户端，并返回服务器的输出。
+
+        :param server_script: str 服务器脚本文件名，相对于cwd参数指定的目录
+        :param server_args: str 服务器命令行参数，空格分隔
+        :param wait_time: float 启动服务器后的等待时间，单位：秒
+        :param client_func: Callable[[], Any] 调用客户端的函数
+        :param cwd: str 当前工作目录，默认为self.dir
+        :return: (str, str, Any) 服务器的标准输出、标准错误和客户端函数的返回结果
+        """
+        cmd = [sys.executable, server_script, *shlex.split(server_args)]
+        server_proc = subprocess.Popen(
             cmd, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
             cwd=self.get_cwd(cwd), encoding='utf-8', text=True)
+        time.sleep(wait_time)
+        client_results = client_func() if callable(client_func) else None
+        server_proc.kill()
+        stdout, stderr = server_proc.communicate()
+        return stdout, stderr, client_results
 
     def get_cwd(self, cwd=None):
         return cwd if cwd is not None else self.dir
