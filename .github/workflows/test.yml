@@ -24,4 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Run test
+        env:
+          PYTHONUNBUFFERED: 1
+          PYTHONIOENCODING: UTF-8
         run: python -m unittest -v

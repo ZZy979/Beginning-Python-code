@@ -8,5 +8,6 @@ class Handler(StreamRequestHandler):
         self.wfile.write(b'Thank you for connecting')
 
 
+ForkingTCPServer.allow_reuse_address = True
 server = ForkingTCPServer(('', 1234), Handler)
 server.serve_forever()

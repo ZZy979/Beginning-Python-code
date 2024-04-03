@@ -103,6 +103,7 @@ python -m unittest
 * [代码清单14-4 分叉服务器](ch14/forking_server.py)
 * [代码清单14-5 线程化服务器](ch14/threading_server.py)
 * [代码清单14-6 使用select的简单服务器](ch14/select_server.py)
+* [Telnet客户端](ch14/telnet_client.py)
 * [代码清单14-7 使用poll的简单服务器](ch14/poll_server.py)
 * [代码清单14-8 使用Twisted的简单服务器](ch14/twisted_server.py)
 * [代码清单14-9 使用LineReceiver改进的日志服务器](ch14/twisted_line_server.py)

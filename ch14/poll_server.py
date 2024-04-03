@@ -2,8 +2,9 @@ import select
 import socket
 
 s = socket.socket()
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-host = socket.gethostname()
+host = ''
 port = 1234
 s.bind((host, port))
 
@@ -15,7 +16,7 @@ p.register(s)
 while True:
     events = p.poll()
     for fd, event in events:
-        if fd in fdmap:
+        if fd == s.fileno():
             c, addr = s.accept()
             print('Got connection from', addr)
             p.register(c)

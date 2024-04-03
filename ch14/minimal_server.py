@@ -1,8 +1,9 @@
 import socket
 
 s = socket.socket()
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-host = socket.gethostname()
+host = ''
 port = 1234
 s.bind((host, port))
 
