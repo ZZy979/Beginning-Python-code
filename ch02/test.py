@@ -19,8 +19,8 @@ class Ch02Tests(test_utils.TestCase):
     def test_sequence_multiplication_example(self):
         self.assertScriptOutput(
             'sequence_multiplication_example.py',
-            input_file=self.dir / 'testdata/sequence_multiplication_example_input.txt',
-            output_file=self.dir / 'testdata/sequence_multiplication_example_output.txt'
+            input_file=self.testdata_dir / 'sequence_multiplication_example_input.txt',
+            output_file=self.testdata_dir / 'sequence_multiplication_example_output.txt'
         )
 
     def test_sequence_membership_example(self):

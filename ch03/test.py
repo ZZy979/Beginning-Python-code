@@ -7,5 +7,5 @@ class Ch03Tests(test_utils.TestCase):
     def test_string_formatting_example(self):
         self.assertScriptOutput(
             'string_formatting_example.py', input='35',
-            output_file=self.dir / 'testdata/string_formatting_example_output.txt'
+            output_file=self.testdata_dir / 'string_formatting_example_output.txt'
         )

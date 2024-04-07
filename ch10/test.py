@@ -9,7 +9,7 @@ class Ch10Tests(test_utils.TestCase):
 
     def test_package(self):
         import sys
-        sys.path.append(str(self.dir))
+        sys.path.append(str(self.src_dir))
 
         import drawing
         self.assertEqual('1.0', drawing.VERSION)
@@ -40,11 +40,11 @@ class Ch10Tests(test_utils.TestCase):
     def test_numberlines(self):
         import filecmp, os, shutil
 
-        input_file = self.dir / 'numberlines.py'
-        expected_file = self.dir / 'testdata/numberlines_output.txt'
+        input_file = self.src_dir / 'numberlines.py'
+        expected_file = self.testdata_dir / 'numberlines_output.txt'
 
         # read from file in command-line arguments
-        tmp_file = self.dir / 'testdata/numberlines.py'
+        tmp_file = self.testdata_dir / 'numberlines.py'
         shutil.copy(input_file, tmp_file)
         self.run_script('numberlines.py', args='testdata/numberlines.py')
         self.assertTrue(filecmp.cmp(expected_file, tmp_file))
@@ -76,7 +76,7 @@ class Ch10Tests(test_utils.TestCase):
                 self.assertTrue(n <= int(m.group(1)) <= n * s)
 
     def test_random_fortune(self):
-        with open(self.dir / 'testdata/fortunes.txt') as f:
+        with open(self.testdata_dir / 'fortunes.txt') as f:
             fortunes = list(f)
         for _ in range(10):
             output = self.run_script('random_fortune.py', args='testdata/fortunes.txt').stdout
@@ -96,18 +96,17 @@ class Ch10Tests(test_utils.TestCase):
     def test_database(self):
         import glob, os
 
-        test_dir = self.dir / 'testdata'
         for i in (1, 2):
             self.assertScriptOutput(
                 'database.py', args='testdata/database.dat',
-                input_file=test_dir / f'database_input{i}.txt',
-                output_file=test_dir / f'database_output{i}.txt')
+                input_file=self.testdata_dir / f'database_input{i}.txt',
+                output_file=self.testdata_dir / f'database_output{i}.txt')
 
-        for f in glob.glob('database.dat*', root_dir=test_dir):
-            os.remove(test_dir / f)
+        for f in glob.glob('database.dat*', root_dir=self.testdata_dir):
+            os.remove(self.testdata_dir / f)
 
     def test_find_sender(self):
-        self.assertScriptOutput('find_sender.py', input_file=self.dir / 'testdata/message.eml', output='Foo Fie\n')
+        self.assertScriptOutput('find_sender.py', input_file=self.testdata_dir / 'message.eml', output='Foo Fie\n')
 
         test_cases = [
             ('From: Alice <alice@example.com>', 'Alice\n'),
@@ -123,7 +122,7 @@ class Ch10Tests(test_utils.TestCase):
     def test_list_email_addresses(self):
         self.assertScriptOutput(
             'list_email_addresses.py', args='testdata/message.eml',
-            output_file=self.dir / 'testdata/list_email_addresses_output.txt')
+            output_file=self.testdata_dir / 'list_email_addresses_output.txt')
 
     def test_templates(self):
         self.assertScriptOutput(
@@ -134,10 +133,10 @@ class Ch10Tests(test_utils.TestCase):
             output='Hello, Mr. Gumby\n')
         self.assertScriptOutput(
             'templates.py', args='testdata/simple_template.txt',
-            output_file=self.dir / 'testdata/simple_template_output.txt')
+            output_file=self.testdata_dir / 'simple_template_output.txt')
 
         import difflib, fileinput
-        expected_output = ''.join(fileinput.input(self.dir / 'testdata/email_template_output.txt'))
+        expected_output = ''.join(fileinput.input(self.testdata_dir / 'email_template_output.txt'))
         output = self.run_script('templates.py', args='testdata/magnus.txt testdata/email_template.txt').stdout
         diff = list(difflib.ndiff(expected_output.splitlines(), output.splitlines()))
         self.assertTrue(all(diff[i].startswith('  ') for i in range(len(diff)) if i not in (11, 12)))

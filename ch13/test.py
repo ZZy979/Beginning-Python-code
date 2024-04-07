@@ -10,7 +10,7 @@ class Ch13Tests(test_utils.TestCase):
         # import data
         ret = self.run_script('importdata.py').returncode
         self.assertEqual(0, ret)
-        self.assertTrue((self.dir / 'food.db').exists())
+        self.assertTrue((self.src_dir / 'food.db').exists())
 
         # make queries
         test_cases = [
@@ -21,6 +21,6 @@ class Ch13Tests(test_utils.TestCase):
         for i, cond in enumerate(test_cases, start=1):
             self.assertScriptOutput(
                 'food_query.py', args=f'"{cond}"',
-                output_file=self.dir / f'testdata/food_database_output{i}.txt')
+                output_file=self.testdata_dir / f'food_database_output{i}.txt')
 
-        os.remove(self.dir / 'food.db')
+        os.remove(self.src_dir / 'food.db')
