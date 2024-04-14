@@ -29,6 +29,9 @@ class Ch15Tests(test_utils.TestCase):
         import os, platform, shutil
 
         cgi_bin_dir = self.src_dir / 'cgi-bin'
+        for script in cgi_bin_dir.glob('*.cgi'):
+            script.chmod(0o755)
+
         if platform.system() == 'Windows':
             # Windows doesn't support .cgi suffix
             for script in cgi_bin_dir.glob('*.cgi'):
