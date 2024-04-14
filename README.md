@@ -4,6 +4,11 @@
 * 本书网站：<https://folk.idi.ntnu.no/mlh/hetland_org/writing/beginning-python-2/>
 * 笔记：<https://zzy979.github.io/posts/python-note-index/>
 
+# 安装依赖
+```shell
+pip install -r requirements.txt
+```
+
 # 单元测试
 在项目根目录下执行：
 
@@ -109,3 +114,14 @@ python -m unittest
 * [代码清单14-7 使用poll的简单服务器](ch14/poll_server.py)
 * [代码清单14-8 使用Twisted的简单服务器](ch14/twisted_server.py)
 * [代码清单14-9 使用LineReceiver改进的日志服务器](ch14/twisted_line_server.py)
+
+## 第15章 Python和Web
+* [代码清单15-1 简单的屏幕抓取程序](ch15/scrape_python_jobs.py)
+* [代码清单15-2 使用HTMLParser的屏幕抓取程序](ch15/scrape_python_jobs_html_parser.py)
+* [代码清单15-3 使用Beautiful Soup的屏幕抓取程序](ch15/scrape_python_jobs_bs.py)
+* [代码清单15-4 简单的CGI脚本](ch15/cgi-bin/simple1.cgi)
+* [CGI HTTP服务器](ch15/cgi_server.py)
+* [代码清单15-5 显示栈跟踪的CGI脚本](ch15/cgi-bin/faulty.cgi)
+* [代码清单15-6 从FieldStorage获取单个值的CGI脚本](ch15/cgi-bin/simple2.cgi)
+* [代码清单15-7 带有HTML表单的问候CGI脚本](ch15/cgi-bin/simple3.cgi)
+* [Flask示例](ch15/powers.py)

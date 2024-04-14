@@ -1,29 +1,48 @@
+import os
 import pathlib
+import runpy
 import shlex
 import subprocess
 import sys
 import time
 import unittest
+from io import StringIO
+from unittest.mock import patch
 
 
 class TestCase(unittest.TestCase):
+    root_dir = pathlib.Path(__file__).resolve().parent
     dirname = ''
 
-    def setUp(self):
-        self.root_dir = pathlib.Path(__file__).resolve().parent
-        self.src_dir = self.root_dir / self.dirname
-        self.testdata_dir = self.src_dir / 'testdata'
+    @property
+    def src_dir(self):
+        return self.root_dir / self.dirname
 
-    def run_script(self, script, args='', input=None, input_file=None):
+    @property
+    def testdata_dir(self):
+        return self.src_dir / 'testdata'
+
+    def run_script(self, script, args='', input=None, input_file=None, subproc=True):
         """运行指定的脚本，返回subprocess.CompletedProcess对象。
 
         :param script: str 脚本文件名，相对于self.src_dir目录
         :param args: str 命令行参数，空格分隔
         :param input: str 输入文本
         :param input_file: str 输入文件名，如果未指定input参数则从该文件读取输入，如果该参数也未指定则没有输入
+        :param subproc: bool 如果为True则在子进程中运行，否则在当前进程中运行
         :return: subprocess.CompletedProcess对象
         """
-        stdin = _prepare_stdin(input, input_file)
+        return self._run_script_subprocess(script, args, input, input_file) if subproc \
+            else self._run_script_runpy(script, args, input, input_file)
+
+    def _run_script_subprocess(self, script, args='', input=None, input_file=None):
+        if input is not None:
+            stdin = None
+        elif input_file:
+            stdin = open(input_file, encoding='utf-8')
+        else:
+            stdin = subprocess.DEVNULL
+
         cmd = [sys.executable, script, *shlex.split(args)]
         result = subprocess.run(
             cmd, stdin=stdin, input=input, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
@@ -33,8 +52,24 @@ class TestCase(unittest.TestCase):
 
         return result
 
+    def _run_script_runpy(self, script, args='', input=None, input_file=None):
+        if input is not None:
+            stdin = StringIO(input)
+        elif input_file:
+            stdin = open(input_file, encoding='utf-8')
+        else:
+            stdin = open(os.devnull)
+
+        with patch('sys.argv', [script, *shlex.split(args)]), \
+                patch('sys.stdin', stdin) as stdin, \
+                patch('sys.stdout', new_callable=StringIO) as stdout, \
+                patch('sys.stderr', new_callable=StringIO) as stderr:
+            runpy.run_path(self.src_dir / script)
+            stdin.close()
+            return subprocess.CompletedProcess(args, 0, stdout.getvalue(), stderr.getvalue())
+
     def assertScriptOutput(
-            self, script, args='', input=None, input_file=None,
+            self, script, args='', input=None, input_file=None, subproc=True,
             prompt=None, output=None, output_file=None):
         """运行指定的脚本，并比较标准输出。
 
@@ -42,24 +77,33 @@ class TestCase(unittest.TestCase):
         :param args: str 命令行参数，空格分隔
         :param input: str 输入文本
         :param input_file: str 输入文件名，如果未指定input参数则从该文件读取输入，如果该参数也未指定则没有输入
+        :param subproc: bool 如果为True则在子进程中运行，否则在当前进程中运行
         :param prompt: str 输入提示文本，如果指定了output参数则将其拼接到output开头
         :param output: str 期望输出文本
         :param output_file: str 期望输出文件名，如果未指定output参数则与该文件比较输出，如果该参数也未指定则期望无输出
         """
-        expected_output = _prepare_expected_output(prompt, output, output_file)
-        actual_output = self.run_script(script, args, input, input_file).stdout
+        if output is not None:
+            expected_output = (prompt or '') + output
+        elif output_file:
+            with open(output_file, encoding='utf-8') as f:
+                expected_output = f.read()
+        else:
+            expected_output = ''
+
+        actual_output = self.run_script(script, args, input, input_file, subproc).stdout
         self.assertEqual(expected_output, actual_output)
 
-    def run_server(self, server_script, server_args='', wait_time=1, client_func=None):
+    def run_server(self, server_script, server_args='', cmd=None, wait_time=1, client_func=None):
         """运行指定的服务器脚本，之后调用客户端，并返回服务器的输出。
 
         :param server_script: str 服务器脚本文件名，相对于self.src_dir目录
         :param server_args: str 服务器命令行参数，空格分隔
+        :param cmd: str or List[str] 服务器命令，如果未指定则执行server_script
         :param wait_time: float 启动服务器后的等待时间，单位：秒
         :param client_func: Callable[[], Any] 调用客户端的函数
         :return: (str, str, Any) 服务器的标准输出、标准错误和客户端函数的返回结果
         """
-        cmd = [sys.executable, server_script, *shlex.split(server_args)]
+        cmd = cmd or [sys.executable, server_script, *shlex.split(server_args)]
         server_proc = subprocess.Popen(
             cmd, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
             cwd=self.src_dir, encoding='utf-8', text=True)
@@ -68,22 +112,3 @@ class TestCase(unittest.TestCase):
         server_proc.kill()
         stdout, stderr = server_proc.communicate()
         return stdout, stderr, client_results
-
-
-def _prepare_stdin(input, input_file):
-    if input is not None:
-        return None
-    elif input_file:
-        return open(input_file, encoding='utf-8')
-    else:
-        return subprocess.DEVNULL
-
-
-def _prepare_expected_output(prompt, output, output_file):
-    if output is not None:
-        return (prompt or '') + output
-    elif output_file:
-        with open(output_file, encoding='utf-8') as f:
-            return f.read()
-    else:
-        return ''

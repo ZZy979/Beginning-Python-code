@@ -1,0 +1,1519 @@
+
+
+<!doctype html>
+<!--[if lt IE 7]>   <html class="no-js ie6 lt-ie7 lt-ie8 lt-ie9">   <![endif]-->
+<!--[if IE 7]>      <html class="no-js ie7 lt-ie8 lt-ie9">          <![endif]-->
+<!--[if IE 8]>      <html class="no-js ie8 lt-ie9">                 <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr">  <!--<![endif]-->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TF35YF9CVH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TF35YF9CVH');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="prefetch" href="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    <link rel="prefetch" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+
+    <meta name="application-name" content="Python.org">
+    <meta name="msapplication-tooltip" content="The official home of the Python Programming Language">
+    <meta name="apple-mobile-web-app-title" content="Python.org">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="imagetoolbar" content="false">
+
+    <script async
+            src="https://media.ethicalads.io/media/client/v1.4.0/ethicalads.min.js"
+            integrity="sha256-U3hKDidudIaxBDEzwGJApJgPEf2mWk6cfMWghrAa6i0= sha384-UcmsCqcNRSLW/dV3Lo1oCi2/VaurXbib6p4HyUEOeIa/4OpsrnucrugAefzVZJfI sha512-q4t1L4xEjGV2R4hzqCa41P8jrgFUS8xTb8rdNv4FGvw7FpydVj/kkxBJHOiaoxHa8olCcx1Slk9K+3sNbsM4ug=="
+            crossorigin="anonymous"
+    ></script>
+    <script src="/static/js/libs/modernizr.js"></script>
+
+    <link href="/static/stylesheets/style.1c0f356ef3c7.css" rel="stylesheet" type="text/css" media="all" title="default" />
+    <link href="/static/stylesheets/mq.f9187444a4a1.css" rel="stylesheet" type="text/css" media="not print, braille, embossed, speech, tty" />
+    <link href="/static/stylesheets/no-mq.bf0c425cdb73.css" rel="stylesheet" type="text/css" media="screen" />
+    
+
+    <!--[if (lte IE 8)&(!IEMobile)]>
+    <link href="/static/stylesheets/no-mq.bf0c425cdb73.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    
+    <![endif]-->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon-precomposed.png">
+
+    
+    <meta name="msapplication-TileImage" content="/static/metro-icon-144x144-precomposed.png"><!-- white shape -->
+    <meta name="msapplication-TileColor" content="#3673a5"><!-- python blue -->
+    <meta name="msapplication-navbutton-color" content="#3673a5">
+
+    <title>Python Job Board | Python.org</title>
+
+    <meta name="description" content="The official home of the Python Programming Language">
+    <meta name="keywords" content="Python programming language object oriented web free open source software license documentation download community">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Python.org">
+    <meta property="og:title" content="Welcome to Python.org">
+    <meta property="og:description" content="The official home of the Python Programming Language">
+    
+    <meta property="og:image" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    <meta property="og:image:secure_url" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    
+    <meta property="og:url" content="https://www.python.org/jobs/">
+
+    <link rel="author" href="/humans.txt">
+
+    <link rel="alternate" type="application/rss+xml" title="Python Enhancement Proposals"
+          href="https://peps.python.org/peps.rss">
+    <link rel="alternate" type="application/rss+xml" title="Python Job Opportunities"
+          href="https://www.python.org/jobs/feed/rss/">
+    <link rel="alternate" type="application/rss+xml" title="Python Software Foundation News"
+          href="https://feeds.feedburner.com/PythonSoftwareFoundationNews">
+    <link rel="alternate" type="application/rss+xml" title="Python Insider"
+          href="https://feeds.feedburner.com/PythonInsider">
+
+    
+
+    
+    <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "WebSite",
+       "url": "https://www.python.org/",
+       "potentialAction": {
+         "@type": "SearchAction",
+         "target": "https://www.python.org/search/?q={search_term_string}",
+         "query-input": "required name=search_term_string"
+       }
+     }
+    </script>
+
+    
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39055973-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    
+</head>
+
+<body class="jobs">
+
+    <div id="touchnav-wrapper">
+
+        <div id="nojs" class="do-not-print">
+            <p><strong>Notice:</strong> While JavaScript is not essential for this website, your interaction with the content will be limited. Please turn JavaScript on for the full experience. </p>
+        </div>
+
+        <!--[if lte IE 8]>
+        <div id="oldie-warning" class="do-not-print">
+            <p>
+                <strong>Notice:</strong> Your browser is <em>ancient</em>. Please
+                <a href="http://browsehappy.com/">upgrade to a different browser</a> to experience a better web.
+            </p>
+        </div>
+        <![endif]-->
+
+        <!-- Sister Site Links -->
+        <div id="top" class="top-bar do-not-print">
+
+            <nav class="meta-navigation container" role="navigation">
+
+                
+                <div class="skip-link screen-reader-text">
+                    <a href="#content" title="Skip to content">Skip to content</a>
+                </div>
+
+                
+                <a id="close-python-network" class="jump-link" href="#python-network" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-down"><span>&#9660;</span></span> Close
+                </a>
+
+                
+
+<ul class="menu" role="tree">
+    
+    <li class="python-meta ">
+        <a href="/" title="The Python Programming Language" >Python</a>
+    </li>
+    
+    <li class="psf-meta ">
+        <a href="https://www.python.org/psf/" title="The Python Software Foundation" >PSF</a>
+    </li>
+    
+    <li class="docs-meta ">
+        <a href="https://docs.python.org" title="Python Documentation" >Docs</a>
+    </li>
+    
+    <li class="pypi-meta ">
+        <a href="https://pypi.org/" title="Python Package Index" >PyPI</a>
+    </li>
+    
+    <li class="jobs-meta current_item selectedcurrent_branch selected">
+        <a href="/jobs/" title="Python Job Board" class="current_item selectedcurrent_branch selected">Jobs</a>
+    </li>
+    
+    <li class="shop-meta ">
+        <a href="/community-landing/"  >Community</a>
+    </li>
+    
+</ul>
+
+
+                <a id="python-network" class="jump-link" href="#top" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> The Python Network
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Header elements -->
+        <header class="main-header" role="banner">
+            <div class="container">
+
+                <h1 class="site-headline">
+                    <a href="/"><img class="python-logo" src="/static/img/python-logo.png" alt="python&trade;"></a>
+                </h1>
+
+                <div class="options-bar-container do-not-print">
+                    <a href="https://psfmember.org/civicrm/contribute/transact?reset=1&id=2" class="donate-button">Donate</a>
+                    <div class="options-bar">
+                        
+                        <a id="site-map-link" class="jump-to-menu" href="#site-map"><span class="menu-icon">&equiv;</span> Menu</a><form class="search-the-site" action="/search/" method="get">
+                            <fieldset title="Search Python.org">
+
+                                <span aria-hidden="true" class="icon-search"></span>
+
+                                <label class="screen-reader-text" for="id-search-field">Search This Site</label>
+                                <input id="id-search-field" name="q" type="search" role="textbox" class="search-field" placeholder="Search" value="" tabindex="1">
+
+                                <button type="submit" name="submit" id="submit" class="search-button" title="Submit this Search" tabindex="3">
+                                    GO
+                                </button>
+
+                                
+                                <!--[if IE]><input type="text" style="display: none;" disabled="disabled" size="1" tabindex="4"><![endif]-->
+
+                            </fieldset>
+                        </form><span class="breaker"></span><div class="adjust-font-size" aria-hidden="true">
+                            <ul class="navigation menu" aria-label="Adjust Text Size on Page">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger"><strong><small>A</small> A</strong></a>
+                                    <ul class="subnav menu">
+                                        <li class="tier-2 element-1" role="treeitem"><a class="text-shrink" title="Make Text Smaller" href="javascript:;">Smaller</a></li>
+                                        <li class="tier-2 element-2" role="treeitem"><a class="text-grow" title="Make Text Larger" href="javascript:;">Larger</a></li>
+                                        <li class="tier-2 element-3" role="treeitem"><a class="text-reset" title="Reset any font size changes I have made" href="javascript:;">Reset</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><div class="winkwink-nudgenudge">
+                            <ul class="navigation menu" aria-label="Social Media Navigation">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger">Socialize</a>
+                                    <ul class="subnav menu">
+                                        <li class="tier-2 element-1" role="treeitem"><a href="https://www.linkedin.com/company/python-software-foundation/"><i aria-hidden="true" class="fa fa-linkedin-square"></i>LinkedIn</a></li>
+                                        <li class="tier-2 element-2" role="treeitem"><a href="https://fosstodon.org/@ThePSF"><span aria-hidden="true" class="icon-mastodon"></span>Mastodon</a></li>
+                                        <li class="tier-2 element-3" role="treeitem"><a href="/community/irc/"><span aria-hidden="true" class="icon-freenode"></span>Chat on IRC</a></li>
+                                        <li class="tier-2 element-4" role="treeitem"><a href="https://twitter.com/ThePSF"><span aria-hidden="true" class="icon-twitter"></span>Twitter</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <span data-html-include="/authenticated"></span>
+                    </div><!-- end options-bar -->
+                </div>
+
+                <nav id="mainnav" class="jobs-navigation main-navigation do-not-print" role="navigation">
+                    
+<ul class="navigation menu" role="menubar" aria-label="Main Navigation">
+    <li class="tier-1 element-1 current_item selected">
+        <a href="/jobs/">Jobs</a>
+    </li>
+    <li class="tier-1 element-2 " aria-haspopup="true">
+        <a href="/jobs/types/">Types</a>
+        <ul class="subnav menu" role="menu" aria-hidden="true">
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/back-end/">Back end</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/big-data/">Big Data</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/cloud/">Cloud</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/database/">Database</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/finance/">Finance</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/front-end/">Front end</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/image-processing/">Image Processing</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/integration/">Integration</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/lead/">Lead</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/machine-learning/">Machine Learning</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/management/">Management</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/numeric-processing/">Numeric processing</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/operations/">Operations</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/systems/">Systems</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/testing/">Testing</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/text-processing/">Text Processing</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/type/web/">Web</a></li>
+            
+        </ul>
+    </li>
+    <li class="tier-1 element-3 " aria-haspopup="true">
+        <a href="/jobs/categories/">Categories</a>
+        <ul class="subnav menu" role="menu" aria-hidden="true">
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/category/data-analyst/">Data Analyst</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/category/developer-engineer/">Developer / Engineer</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/category/other/">Other</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/category/researcher-scientist/">Researcher / Scientist</a></li>
+            
+        </ul>
+    </li>
+    <li class="tier-1 element-4 ">
+        <a href="/jobs/locations/">Locations</a>
+        <ul class="subnav menu" role="menu" aria-hidden="true">
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/telecommute/">Telecommute</a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/amsterdam-netherlands/">
+                
+                    Amsterdam &ndash; Netherlands
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/bengaluru-karnataka-india/">
+                
+                    Bengaluru, Karnataka &ndash; India
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/birmingham-united-kingdom/">
+                
+                    Birmingham &ndash; United Kingdom
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/cambridge-cambridgeshire-united-kingdom/">
+                
+                    Cambridge, Cambridgeshire &ndash; United Kingdom
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/coimbatore-tamil-nadu-india/">
+                
+                    Coimbatore, Tamil Nadu &ndash; India
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/haltern-am-see-nrw-germany/">
+                
+                    Haltern am See, NRW &ndash; Germany
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/hyderabad-india/">
+                
+                    Hyderabad &ndash; India
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/hyderabad-telangana-india/">
+                
+                    Hyderabad, Telangana &ndash; India
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/karlsruhe-germany/">
+                
+                    Karlsruhe &ndash; Germany
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/kyiv/">
+                
+                    Kyiv &ndash; Україна
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/latinoamerica-any-site-argentina-or-any-site-of-latam/">
+                
+                    Latinoamerica, any site &ndash; Argentina or any site of Latam
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/london-we-can-also-consider-applicants-working-fully-remote-4-gmt-united-kingdom/">
+                
+                    London (We can also consider applicants working fully remote +/- 4 GMT) &ndash; United Kingdom
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/moscow-russia/">
+                
+                    Moscow &ndash; Russia
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/munich-germany/">
+                
+                    Munich &ndash; Germany
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/new-york-ny-usa/">
+                
+                    New York, NY &ndash; USA
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/panchkula-haryana-india/">
+                
+                    Panchkula, Haryana &ndash; India
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/philadelphia-pennsylvania-usa/">
+                
+                    Philadelphia, Pennsylvania &ndash; USA
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-and-can-be-based-out-of-ny-fl-de-ma-pa-tn-or-ga-united-states/">
+                
+                    remote and can be based out of NY, FL, DE, MA, PA, TN, or GA &ndash; United States
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-any-country/">
+                
+                    Remote &ndash; Any country
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-europe-or-west-asia-remote/">
+                
+                    Remote, Europe or West Asia &ndash; Remote
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-from-argentina-argentina-argentina-or-rest-of-latinamerica/">
+                
+                    Remote from Argentina, Argentina &ndash; Argentina or rest of Latinamerica
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-remote-remote/">
+                
+                    Remote &ndash; Remote
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-remote-united-states/">
+                
+                    Remote &ndash; United States
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-remote-united-states-of-america/">
+                
+                    Remote &ndash; United States of America
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/remote-usa/">
+                
+                    Remote &ndash; USA
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/san-francisco-ca-usa/">
+                
+                    San Francisco, CA &ndash; USA
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/san-francisco-or-new-york-united-states/">
+                
+                    San Francisco or New York &ndash; United States
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/tbilisi-belgrade-etc-europe-or-west-asia-georgia-serbia-etc/">
+                
+                    Tbilisi, Belgrade etc, Europe or West Asia &ndash; Georgia, Serbia etc.
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/uk-ukeu-based/">
+                
+                    UK &ndash; UK/EU based
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/warsaw-fully-remote-poland/">
+                
+                    Warsaw (fully remote) &ndash; Poland
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/warszawa-poland/">
+                
+                    Warszawa &ndash; Poland
+                
+            </a></li>
+            
+            <li class="tier-2" role="treeitem"><a href="/jobs/location/watford-7-colonial-way-watford-wd24-4ju-great-britain-grear-britain/">
+                
+                    Watford, 7 Colonial Way, Watford WD24 4JU, Great Britain &ndash; Grear Britain
+                
+            </a></li>
+            
+        </ul>
+    </li>
+    <li class="tier-1 element-5 last"><a href="/jobs/create/">Submit</a></li>
+    
+</ul>
+
+                </nav>
+
+                <div class="header-banner "> <!-- for optional "do-not-print" class -->
+                    
+<div class="jobs-intro">
+    <h2 class="welcome-message">Get exploring!</h2>
+    <h1 class="call-to-action">34 jobs on the Python Job Board</h1>
+<!--
+    <p class="excerpt"><strong>Have a job to post?</strong> Please <a href="/jobs/create/">fill out this form</a>, or returning Job Board users may <a href="/accounts/login/?next=/jobs/">log in here</a> to update job postings and create new ones.</p>
+-->
+
+</div>
+
+                </div>
+
+                
+                
+
+             </div><!-- end .container -->
+        </header>
+
+        <div id="content" class="content-wrapper">
+            <!-- Main Content Column -->
+            <div class="container">
+
+                <section class="main-content with-right-sidebar" role="main">
+
+                    
+                    
+
+                    
+
+                    
+<div class="row">
+    
+    <ol class="list-recent-jobs list-row-container menu">
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7544/">SENIOR SOFTWARE ENGINEER</a><br/>
+		    TeraView Ltd
+                </span>
+                <span class="listing-location"><a href="/jobs/location/cambridge-cambridgeshire-united-kingdom/" title="More jobs in Cambridge, Cambridgeshire, United Kingdom">Cambridge, Cambridgeshire, United Kingdom</a></span>
+            </h2>
+            
+            <span class="listing-job-type">
+                
+                Industrial and Scientific Instrumentation
+                
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-04-03T10:57:40.506619+00:00">03 April 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7543/">Senior Python Developer</a><br/>
+		    Idea Clan
+                </span>
+                <span class="listing-location"><a href="/jobs/location/panchkula-haryana-india/" title="More jobs in Panchkula, Haryana, India">Panchkula, Haryana, India</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/big-data/" title="More Big Data jobs">Big Data</a>, <a href="/jobs/type/cloud/" title="More Cloud jobs">Cloud</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/lead/" title="More Lead jobs">Lead</a>, <a href="/jobs/type/management/" title="More Management jobs">Management</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-30T11:26:07.697668+00:00">30 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7542/">Remote Full-stack Python Developer</a><br/>
+		    Scopic
+                </span>
+                <span class="listing-location"><a href="/jobs/location/remote-any-country/" title="More jobs in Remote, Any country">Remote, Any country</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-29T12:33:31.680531+00:00">29 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7541/">Django Developer</a><br/>
+		    The Developer Society
+                </span>
+                <span class="listing-location"><a href="/jobs/location/birmingham-united-kingdom/" title="More jobs in Birmingham, United Kingdom">Birmingham, United Kingdom</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/cloud/" title="More Cloud jobs">Cloud</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-26T22:33:34.706983+00:00">26 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7540/">Senior Full Stack Engineer</a><br/>
+		    Carbon Equity
+                </span>
+                <span class="listing-location"><a href="/jobs/location/amsterdam-netherlands/" title="More jobs in Amsterdam, Netherlands">Amsterdam, Netherlands</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/finance/" title="More Finance jobs">Finance</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>, django 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-26T19:51:29.971161+00:00">26 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7539/">Full-stack Python Developer</a><br/>
+		    Scalable Path
+                </span>
+                <span class="listing-location"><a href="/jobs/location/remote-remote-remote/" title="More jobs in Remote, Remote, Remote">Remote, Remote, Remote</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-26T14:04:14.255946+00:00">26 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7535/">Python Software Engineer</a><br/>
+		    BlockDox
+                </span>
+                <span class="listing-location"><a href="/jobs/location/uk-ukeu-based/" title="More jobs in UK, UK/EU based">UK, UK/EU based</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/big-data/" title="More Big Data jobs">Big Data</a>, <a href="/jobs/type/cloud/" title="More Cloud jobs">Cloud</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>, <a href="/jobs/type/integration/" title="More Integration jobs">Integration</a>, <a href="/jobs/type/machine-learning/" title="More Machine Learning jobs">Machine Learning</a>, <a href="/jobs/type/numeric-processing/" title="More Numeric processing jobs">Numeric processing</a>, <a href="/jobs/type/text-processing/" title="More Text Processing jobs">Text Processing</a>, Node.js; React; Node, SQL 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-19T13:57:53.288571+00:00">19 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7533/">Python AI Developer</a><br/>
+		    CORE AI
+                </span>
+                <span class="listing-location"><a href="/jobs/location/coimbatore-tamil-nadu-india/" title="More jobs in Coimbatore, Tamil Nadu, India">Coimbatore, Tamil Nadu, India</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/image-processing/" title="More Image Processing jobs">Image Processing</a>, <a href="/jobs/type/integration/" title="More Integration jobs">Integration</a>, <a href="/jobs/type/machine-learning/" title="More Machine Learning jobs">Machine Learning</a>, <a href="/jobs/type/operations/" title="More Operations jobs">Operations</a>, <a href="/jobs/type/systems/" title="More Systems jobs">Systems</a>, <a href="/jobs/type/testing/" title="More Testing jobs">Testing</a>, <a href="/jobs/type/text-processing/" title="More Text Processing jobs">Text Processing</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-12T05:17:44.885575+00:00">12 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7532/">Software Development Engineer</a><br/>
+		    Patrick J. McGovern Foundation
+                </span>
+                <span class="listing-location"><a href="/jobs/location/remote-remote-united-states-of-america/" title="More jobs in Remote, Remote, United States of America">Remote, Remote, United States of America</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, Full Stack 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-11T18:36:12.442518+00:00">11 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7531/">Data Engineering Lead</a><br/>
+		    Adelaide
+                </span>
+                <span class="listing-location"><a href="/jobs/location/new-york-ny-usa/" title="More jobs in New York, NY, USA">New York, NY, USA</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/big-data/" title="More Big Data jobs">Big Data</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/lead/" title="More Lead jobs">Lead</a>, <a href="/jobs/type/machine-learning/" title="More Machine Learning jobs">Machine Learning</a>, <a href="/jobs/type/management/" title="More Management jobs">Management</a>, Python, Spark, Pyspark, Ad Tech, SQL, Postgres, Scala, ETL, AWS, Redshift 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-11T17:44:50.602085+00:00">11 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7530/">Senior Python Developer</a><br/>
+		    Gowork.pl
+                </span>
+                <span class="listing-location"><a href="/jobs/location/warszawa-poland/" title="More jobs in Warszawa, Poland">Warszawa, Poland</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/management/" title="More Management jobs">Management</a>, <a href="/jobs/type/systems/" title="More Systems jobs">Systems</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-11T11:33:30.878275+00:00">11 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/other/" title="More jobs in Other">Other</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    <span class="listing-new">New</span>
+                    
+                    <a href="/jobs/7529/">Scientific programmer (m/f/x) (climate modeling)</a><br/>
+		    Ludwig-Maximilians-Universität in Munich
+                </span>
+                <span class="listing-location"><a href="/jobs/location/munich-germany/" title="More jobs in Munich, Germany">Munich, Germany</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/big-data/" title="More Big Data jobs">Big Data</a>, <a href="/jobs/type/machine-learning/" title="More Machine Learning jobs">Machine Learning</a>, <a href="/jobs/type/numeric-processing/" title="More Numeric processing jobs">Numeric processing</a>, <a href="/jobs/type/operations/" title="More Operations jobs">Operations</a>, <a href="/jobs/type/systems/" title="More Systems jobs">Systems</a>, numerical modeling, high-performance computing, data analysis, scientific computing 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-10T12:43:41.960295+00:00">10 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/researcher-scientist/" title="More jobs in Researcher / Scientist">Researcher / Scientist</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7528/">Senior Software Engineer</a><br/>
+		    SimpleLegal
+                </span>
+                <span class="listing-location"><a href="/jobs/location/remote-usa/" title="More jobs in Remote, USA">Remote, USA</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>, Postgres 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-06T17:20:04.564664+00:00">06 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7527/">Python Sr Dev / TL Dev  urgent position</a><br/>
+		    Techunting
+                </span>
+                <span class="listing-location"><a href="/jobs/location/latinoamerica-any-site-argentina-or-any-site-of-latam/" title="More jobs in Latinoamerica, any site, Argentina or any site of Latam">Latinoamerica, any site, Argentina or any site of Latam</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>, <a href="/jobs/type/lead/" title="More Lead jobs">Lead</a>, python  AWS 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-06T15:48:49.715574+00:00">06 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7526/">Senior Python Developer</a><br/>
+		    Deep Cognition India Pvt Ltd
+                </span>
+                <span class="listing-location"><a href="/jobs/location/bengaluru-karnataka-india/" title="More jobs in Bengaluru, Karnataka, India">Bengaluru, Karnataka, India</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-06T13:10:31.038313+00:00">06 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7525/">Python full-stack developer (Django framework + Vue.js)</a><br/>
+		    sync.blue
+                </span>
+                <span class="listing-location"><a href="/jobs/location/haltern-am-see-nrw-germany/" title="More jobs in Haltern am See, NRW, Germany">Haltern am See, NRW, Germany</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/cloud/" title="More Cloud jobs">Cloud</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>, <a href="/jobs/type/integration/" title="More Integration jobs">Integration</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-06T10:02:32.617301+00:00">06 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7524/">Full-stack Developer</a><br/>
+		    Lemon.io
+                </span>
+                <span class="listing-location"><a href="/jobs/location/kyiv/" title="More jobs in Kyiv, Україна">Kyiv, Україна</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>, react.js 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-03-04T20:13:57.702822+00:00">04 March 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7519/">Senior Software Engineer</a><br/>
+		    Valence
+                </span>
+                <span class="listing-location"><a href="/jobs/location/san-francisco-or-new-york-united-states/" title="More jobs in San Francisco or New York, United States">San Francisco or New York, United States</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>, <a href="/jobs/type/machine-learning/" title="More Machine Learning jobs">Machine Learning</a>, Vue.js, Django, Python, Tailwind CSS, HTML, CSS, javacript,  Relational DBs, MySQL, Postgres, SQLS 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-28T20:16:16.043757+00:00">28 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7518/">Python Backend Engineer</a><br/>
+		    Infiniminds Pvt Ltd
+                </span>
+                <span class="listing-location"><a href="/jobs/location/hyderabad-india/" title="More jobs in Hyderabad, India">Hyderabad, India</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/lead/" title="More Lead jobs">Lead</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-28T12:53:01.023056+00:00">28 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7517/">Full Stack Python Developer</a><br/>
+		    Loginsoft
+                </span>
+                <span class="listing-location"><a href="/jobs/location/hyderabad-telangana-india/" title="More jobs in Hyderabad, Telangana, India">Hyderabad, Telangana, India</a></span>
+            </h2>
+            
+            <span class="listing-job-type">
+                
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-26T14:22:12.983596+00:00">26 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7516/">Remote Full-stack Python Developer</a><br/>
+		    Scopic
+                </span>
+                <span class="listing-location"><a href="/jobs/location/remote-any-country/" title="More jobs in Remote, Any country">Remote, Any country</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-23T12:18:56.461952+00:00">23 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7513/">Senior Python Developer</a><br/>
+		    CloudLinux
+                </span>
+                <span class="listing-location"><a href="/jobs/location/remote-europe-or-west-asia-remote/" title="More jobs in Remote, Europe or West Asia, Remote">Remote, Europe or West Asia, Remote</a></span>
+            </h2>
+            
+            <span class="listing-job-type">
+                
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-19T16:49:07.768977+00:00">19 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7512/">Lead/Senior Python Developer for Imunify</a><br/>
+		    CloudLinux
+                </span>
+                <span class="listing-location"><a href="/jobs/location/tbilisi-belgrade-etc-europe-or-west-asia-georgia-serbia-etc/" title="More jobs in Tbilisi, Belgrade etc, Europe or West Asia, Georgia, Serbia etc.">Tbilisi, Belgrade etc, Europe or West Asia, Georgia, Serbia etc.</a></span>
+            </h2>
+            
+            <span class="listing-job-type">
+                
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-19T16:45:56.960652+00:00">19 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7509/">Senior Python Cyber Integrations Engineer</a><br/>
+		    Loginsoft
+                </span>
+                <span class="listing-location"><a href="/jobs/location/hyderabad-telangana-india/" title="More jobs in Hyderabad, Telangana, India">Hyderabad, Telangana, India</a></span>
+            </h2>
+            
+            <span class="listing-job-type"><a href="/jobs/type/back-end/" title="More Back end jobs">Back end</a>, <a href="/jobs/type/cloud/" title="More Cloud jobs">Cloud</a>, <a href="/jobs/type/database/" title="More Database jobs">Database</a>, <a href="/jobs/type/front-end/" title="More Front end jobs">Front end</a>, <a href="/jobs/type/integration/" title="More Integration jobs">Integration</a>, <a href="/jobs/type/lead/" title="More Lead jobs">Lead</a>, <a href="/jobs/type/management/" title="More Management jobs">Management</a>, <a href="/jobs/type/systems/" title="More Systems jobs">Systems</a>, <a href="/jobs/type/testing/" title="More Testing jobs">Testing</a>, <a href="/jobs/type/web/" title="More Web jobs">Web</a>, Python, Django/ Flask, JavaScript, API Integrations, SQL injection, Docker, Third-party integration 
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-16T11:33:39.188604+00:00">16 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+        <li>
+            <h2 class="listing-company">
+                <span class="listing-company-name">
+                    
+                    
+                    <a href="/jobs/7507/">Python Sr Dev Urgent requirement</a><br/>
+		    Techunting is looking for a Python Sr Dev for a very important client in the US full time staff dev
+                </span>
+                <span class="listing-location"><a href="/jobs/location/remote-from-argentina-argentina-argentina-or-rest-of-latinamerica/" title="More jobs in Remote from Argentina, Argentina, Argentina or rest of Latinamerica">Remote from Argentina, Argentina, Argentina or rest of Latinamerica</a></span>
+            </h2>
+            
+            <span class="listing-job-type">
+                
+                AWS, Python
+                
+            </span>
+            
+            <span class="listing-posted">Posted: <time datetime="2024-02-15T16:02:53.761441+00:00">15 February 2024</time></span>
+            <span class="listing-company-category"><a href="/jobs/category/developer-engineer/" title="More jobs in Developer / Engineer">Developer / Engineer</a></span>
+            
+        </li>
+        
+    </ol>
+
+    <!-- Pagination -->
+    
+    <ul class="pagination menu">
+        
+            <li class="previous"><a class="disabled" href="">Prev</a></li>
+        
+
+        
+        <li><a class="active" href="?page=1">1</a></li>
+        
+        <li><a href="?page=2">2</a></li>
+        
+
+        
+            <li class="next"><a href="?page=2">Next</a></li>
+        
+    </ul>
+    
+</div>
+
+
+                </section>
+
+                
+                
+
+                
+<aside class="right-sidebar">
+    
+
+        
+
+        <div class="sidebar-widget">
+<h3 class="widget-title">Submit a Job</h3>
+
+    <p>Have a job that our community would be interested in? 
+    <b>Please check our <a href="/community/jobs/howto/">job submission how-to</a> for details on how
+    to file a job posting.</b></p>
+
+    
+    <p>After you have reviewed our <a href="/community/jobs/howto/">how-to document</a>,
+    please <a href="/accounts/login/?next=/jobs/create/">login
+    and use this form</a> to create a new job posting</p>
+    <p>If you have submitted jobs previously under your login, you can view them by
+    <a href="/accounts/login/?next=/jobs/mine/">logging in now</a>.</p>
+    
+
+    <p>In case of questions, please contact the 
+    <a href="mailto:jobs@python.org">PSF Python Job Board team</a>. Thank you.</p>
+
+</div>
+
+        
+
+
+
+
+
+        <div class="sidebar-widget">
+            <h3 class="widget-title">Stay up-to-date</h3>
+<p><a href="/jobs/feed/rss/"><span aria-hidden="true" class="icon-feed"></span>Subscribe via RSS</a></p>
+<p><a href="https://twitter.com/ThePSF"><span aria-hidden="true" class="icon-twitter"></span>Follow The PSF via Twitter</a></p>
+        </div>
+
+        <div class="sidebar-widget">
+            
+
+
+
+
+
+
+
+  <h3 class="widget-title">Job Board Sponsors</h3>
+  <div style="display: grid; grid-gap: 1em; grid-template-columns: repeat(auto-fit, minmax(100px, 0fr)); grid-template-rows: repeat(1, minmax(50px, 0fr)); align-items: center; justify-content: center; margin-top: 1em;">
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/00/fa/00fa78e78eb497fc81bfd7a43fd0d30a.png" alt="Bloomberg logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/c4/ff/c4ff20bac4d6c853cc142131caac5d31.png" alt="Fastly logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/02/e2/02e2b3fe6073ea810225a8db6f1f3bcd.png" alt="Meta logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/1d/d1/1dd13761fb075b424b2c4900766c9766.png" alt="Google logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/c8/09/c809d9004913d3ea13195f414151c662.png" alt="Ansys logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/a8/51/a851993bccd5a082badef72d9c33acbf.png" alt="Microsoft logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/f1/5b/f15bc4a48f0e945589e9ed594a464ef4.png" alt="AWS logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/cf/84/cf8496fca0b75874033b48269e122a01.png" alt="Cubist Systematic Strategies logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/d5/5c/d55c7ca2e932909436b8eabaeb08dfd0.png" alt="Capital One logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/bc/5f/bc5f33f6ab9a60a8ed3df73ee0ad6c20.png" alt="American Express logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/db/7e/db7e4daf6d6a51ec5f5ce5565ccb1c6b.png" alt="MongoDB logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/14/38/14384863e17e3947bf9bd77873a57d48.png" alt="Streamlit logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/16/21/1621a06149d2bb4cf631313da702068d.png" alt="Qube Research &amp; Technologies Limited logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/14/3b/143becd6ec5a8364bb583584b647cb43.png" alt="Indeed logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/36/1e/361ec312a9fa76f8a7babbfdf5015a5f.png" alt="JetBrains logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  
+    <div>
+      <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/96/39/9639a91eacbfc97749d3a85b419906a6.png" alt="OpenEDG Python Institute logo" style="max-height:100px;max-width:100px;height:auto;width:auto;">
+    </div>
+  
+  
+  </div>
+
+
+
+
+        </div>
+
+        
+
+    
+</aside>
+
+
+
+            </div><!-- end .container -->
+        </div><!-- end #content .content-wrapper -->
+
+        <!-- Footer and social media list -->
+        
+        <footer id="site-map" class="main-footer" role="contentinfo">
+            <div class="main-footer-links">
+                <div class="container">
+
+                    
+                    <a id="back-to-top-1" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+
+                    
+
+<ul class="sitemap navigation menu do-not-print" role="tree" id="container">
+    
+    <li class="tier-1 element-1">
+        <a href="/about/" >About</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/about/apps/" title="">Applications</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/about/quotes/" title="">Quotes</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/about/gettingstarted/" title="">Getting Started</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/about/help/" title="">Help</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://brochure.getpython.info/" title="">Python Brochure</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-2">
+        <a href="/downloads/" >Downloads</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/downloads/" title="">All releases</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/downloads/source/" title="">Source code</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/downloads/windows/" title="">Windows</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/downloads/macos/" title="">macOS</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/download/other/" title="">Other Platforms</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="https://docs.python.org/3/license.html" title="">License</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/download/alternatives" title="">Alternative Implementations</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-3">
+        <a href="/doc/" >Documentation</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/doc/" title="">Docs</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/doc/av" title="">Audio/Visual Talks</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://wiki.python.org/moin/BeginnersGuide" title="">Beginner&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://docs.python.org/faq/" title="">FAQ</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="http://wiki.python.org/moin/Languages" title="">Non-English Docs</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="https://peps.python.org" title="">PEP Index</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="https://wiki.python.org/moin/PythonBooks" title="">Python Books</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="/doc/essays/" title="">Python Essays</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-4">
+        <a href="/community/" >Community</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/community/diversity/" title="">Diversity</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/community/lists/" title="">Mailing Lists</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/community/irc/" title="">IRC</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/community/forums/" title="">Forums</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/psf/annual-report/2021/" title="">PSF Annual Impact Report</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/community/workshops/" title="">Python Conferences</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/community/sigs/" title="">Special Interest Groups</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/community/logos/" title="">Python Logo</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="https://wiki.python.org/moin/" title="">Python Wiki</a></li>
+    
+        <li class="tier-2 element-10" role="treeitem"><a href="/psf/conduct/" title="">Code of Conduct</a></li>
+    
+        <li class="tier-2 element-11" role="treeitem"><a href="/community/awards" title="">Community Awards</a></li>
+    
+        <li class="tier-2 element-12" role="treeitem"><a href="/psf/get-involved/" title="">Get Involved</a></li>
+    
+        <li class="tier-2 element-13" role="treeitem"><a href="/psf/community-stories/" title="">Shared Stories</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-5">
+        <a href="/success-stories/" title="success-stories">Success Stories</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/success-stories/category/arts/" title="">Arts</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/success-stories/category/business/" title="">Business</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/success-stories/category/education/" title="">Education</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/success-stories/category/engineering/" title="">Engineering</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/success-stories/category/government/" title="">Government</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/success-stories/category/scientific/" title="">Scientific</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/success-stories/category/software-development/" title="">Software Development</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-6">
+        <a href="/blogs/" title="News from around the Python world">News</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/blogs/" title="Python Insider Blog Posts">Python News</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/newsletter/" title="Python Software Foundation Newsletter">PSF Newsletter</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="http://pyfound.blogspot.com/" title="PSF Blog">PSF News</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="http://pycon.blogspot.com/" title="PyCon Blog">PyCon US News</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://planetpython.org/" title="Planet Python">News from the Community</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-7">
+        <a href="/events/" >Events</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/events/python-events/" title="">Python Events</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/events/python-user-group/" title="">User Group Events</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/events/python-events/past/" title="">Python Events Archive</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/events/python-user-group/past/" title="">User Group Events Archive</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://wiki.python.org/moin/PythonEventsCalendar#Submitting_an_Event" title="">Submit an Event</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-8">
+        <a href="/dev/" >Contributing</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="https://github.com/python/cpython/issues" title="">Issue Tracker</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://mail.python.org/mailman/listinfo/python-dev" title="">python-dev list</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/dev/core-mentorship/" title="">Core Mentorship</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/dev/security/" title="">Report a Security Issue</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+
+                    <a id="back-to-top-2" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+                    
+
+                </div><!-- end .container -->
+            </div> <!-- end .main-footer-links -->
+
+            <div class="site-base">
+                <div class="container">
+                    
+                    <ul class="footer-links navigation menu do-not-print" role="tree">
+                        <li class="tier-1 element-1"><a href="/about/help/">Help &amp; <span class="say-no-more">General</span> Contact</a></li>
+                        <li class="tier-1 element-2"><a href="/community/diversity/">Diversity <span class="say-no-more">Initiatives</span></a></li>
+                        <li class="tier-1 element-3"><a href="https://github.com/python/pythondotorg/issues">Submit Website Bug</a></li>
+                        <li class="tier-1 element-4">
+                            <a href="https://status.python.org/">Status <span class="python-status-indicator-default" id="python-status-indicator"></span></a>
+                        </li>
+                    </ul>
+
+                    <div class="copyright">
+                        <p><small>
+                            <span class="pre">Copyright &copy;2001-2024.</span>
+                            &nbsp;<span class="pre"><a href="/psf-landing/">Python Software Foundation</a></span>
+                            &nbsp;<span class="pre"><a href="/about/legal/">Legal Statements</a></span>
+                            &nbsp;<span class="pre"><a href="/privacy/">Privacy Policy</a></span>
+                            <!--&nbsp;<span class="pre"><a href="/psf/community-infrastructure">Powered by PSF Community Infrastructure</a></span>-->
+                        </small></p>
+                    </div>
+
+                </div><!-- end .container -->
+            </div><!-- end .site-base -->
+
+        </footer>
+        
+
+    </div><!-- end #touchnav-wrapper -->
+
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-ui-1.12.1.min.js"><\/script>')</script>
+
+    <script src="/static/js/libs/masonry.pkgd.min.js"></script>
+    <script src="/static/js/libs/html-includes.js"></script>
+
+    <script type="text/javascript" src="/static/js/main-min.f5487accf7ed.js" charset="utf-8"></script>
+    
+
+    <!--[if lte IE 7]>
+    <script type="text/javascript" src="/static/js/plugins/IE8-min.8af6e26c7a3b.js" charset="utf-8"></script>
+    
+    
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/static/js/plugins/getComputedStyle-min.d41d8cd98f00.js" charset="utf-8"></script>
+    
+    
+    <![endif]-->
+
+    
+
+    
+    
+
+</body>
+</html>
