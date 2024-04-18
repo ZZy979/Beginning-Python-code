@@ -59,18 +59,19 @@ class Ch15Tests(test_utils.TestCase):
                 }
                 return {name: f.result().text for name, f in client_futures.items()}
 
-        _, _, result = self.run_server('cgi_server.py', client_func=_run_cgi_scripts)
-        self.assertIn('Hello, world!', result['simple1'])
-        self.assertIn('ZeroDivisionError', result['faulty'])
-        self.assertIn('Hello, world!', result['simple2_1'])
-        self.assertIn('Hello, Gumby!', result['simple2_2'])
-        self.assertIn('Hello, world!', result['simple3_1'])
-        self.assertIn('Hello, Mr. Gumby!', result['simple3_2'])
-
-        if platform.system() == 'Windows':
-            # cleanup
-            for script in cgi_bin_dir.glob('*.py'):
-                os.remove(script)
+        try:
+            _, _, result = self.run_server('cgi_server.py', wait_time=2, client_func=_run_cgi_scripts)
+            self.assertIn('Hello, world!', result['simple1'])
+            self.assertIn('ZeroDivisionError', result['faulty'])
+            self.assertIn('Hello, world!', result['simple2_1'])
+            self.assertIn('Hello, Gumby!', result['simple2_2'])
+            self.assertIn('Hello, world!', result['simple3_1'])
+            self.assertIn('Hello, Mr. Gumby!', result['simple3_2'])
+        finally:
+            if platform.system() == 'Windows':
+                # cleanup
+                for script in cgi_bin_dir.glob('*.py'):
+                    os.remove(script)
 
     def test_powers(self):
         def _clients():

@@ -125,3 +125,8 @@ python -m unittest
 * [代码清单15-6 从FieldStorage获取单个值的CGI脚本](ch15/cgi-bin/simple2.cgi)
 * [代码清单15-7 带有HTML表单的问候CGI脚本](ch15/cgi-bin/simple3.cgi)
 * [Flask示例](ch15/powers.py)
+
+## 第16章 测试
+* [代码清单16-1 简单的测试程序](ch16/area_test.py)
+* [doctest示例](ch16/my_math.py)
+* [代码清单16-2 使用unittest框架的简单测试](ch16/test_my_math.py)
