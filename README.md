@@ -2,6 +2,7 @@
 《Python基础教程》(Beginning Python: From Novice to Professional)（第3版）书中代码
 
 * 本书网站：<https://folk.idi.ntnu.no/mlh/hetland_org/writing/beginning-python-2/>
+* 源代码：<https://github.com/Apress/beginning-python-3ed>
 * 笔记：<https://zzy979.github.io/posts/python-note-index/>
 
 # 安装依赖
@@ -130,3 +131,11 @@ python -m unittest
 * [代码清单16-1 简单的测试程序](ch16/area_test.py)
 * [doctest示例](ch16/my_math.py)
 * [代码清单16-2 使用unittest框架的简单测试](ch16/test_my_math.py)
+
+## 第17章 扩展Python
+* [代码清单17-1 一个简单的Java类](ch17/JythonTest.java)
+* [代码清单17-2 一个简单的C#类](ch17/IronPythonTest.cs)
+* [代码清单17-3 检测回文的C语言函数](ch17/palindrome.c)
+* [代码清单17-4 检测回文的Python函数](ch17/palindrome.py)
+* [代码清单17-5 回文库的接口文件](ch17/palindrome.i)
+* [代码清单17-6 检测回文2](ch17/palindrome2.c)

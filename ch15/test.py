@@ -60,7 +60,7 @@ class Ch15Tests(test_utils.TestCase):
                 return {name: f.result().text for name, f in client_futures.items()}
 
         try:
-            _, _, result = self.run_server('cgi_server.py', wait_time=2, client_func=_run_cgi_scripts)
+            _, _, result = self.run_server_script('cgi_server.py', wait_time=4, client_func=_run_cgi_scripts)
             self.assertIn('Hello, world!', result['simple1'])
             self.assertIn('ZeroDivisionError', result['faulty'])
             self.assertIn('Hello, world!', result['simple2_1'])
@@ -81,7 +81,7 @@ class Ch15Tests(test_utils.TestCase):
                 client_futures = {n: executor.submit(requests.get, base_url + str(n)) for n in test_cases}
                 return {n: f.result().text for n, f in client_futures.items()}
 
-        _, _, results = self.run_server('', cmd=['flask', '--app', 'powers', 'run'], client_func=_clients)
+        _, _, results = self.run_server_cmd('flask --app powers run'.split(), client_func=_clients)
         self.assertEqual('1, 2, 4', results[3])
         self.assertEqual('1, 2, 4, 8, 16, 32, 64, 128, 256, 512', results[10])
         self.assertEqual('1', results[1])
