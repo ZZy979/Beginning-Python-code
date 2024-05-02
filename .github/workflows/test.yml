@@ -11,11 +11,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macos-13  # OpenJDK 8 is not supported on macos-latest.
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -23,8 +26,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      - name: Setup Jython
+        uses: LukeSavefrogs/setup-jython@v3
+        with:
+          jython-version: '2.7.3'
       - name: Run test
-        env:
-          PYTHONUNBUFFERED: 1
-          PYTHONIOENCODING: UTF-8
         run: python -m unittest -v

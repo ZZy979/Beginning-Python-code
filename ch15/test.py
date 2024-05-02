@@ -60,7 +60,7 @@ class Ch15Tests(test_utils.TestCase):
                 return {name: f.result().text for name, f in client_futures.items()}
 
         try:
-            _, _, result = self.run_server_script('cgi_server.py', wait_time=4, client_func=_run_cgi_scripts)
+            _, _, result = self.run_server_script('cgi_server.py', wait_time=2, client_func=_run_cgi_scripts)
             self.assertIn('Hello, world!', result['simple1'])
             self.assertIn('ZeroDivisionError', result['faulty'])
             self.assertIn('Hello, world!', result['simple2_1'])
