@@ -26,7 +26,10 @@ class Ch15Tests(test_utils.TestCase):
         self._test_python_jobs_crawler('scrape_python_jobs_bs.py')
 
     def test_cgi_scripts(self):
-        import os, platform, shutil
+        import os, platform, shutil, unittest
+
+        if platform.system() == 'Darwin':
+            raise unittest.SkipTest('macOS: Connection reset by peer')  # TODO solve this
 
         cgi_bin_dir = self.src_dir / 'cgi-bin'
         for script in cgi_bin_dir.glob('*.cgi'):

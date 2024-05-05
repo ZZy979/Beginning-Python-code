@@ -11,10 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os:
-          - ubuntu-latest
-          - windows-latest
-          - macos-13  # OpenJDK 8 is not supported on macos-latest.
+        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -27,8 +24,24 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Setup Jython
-        uses: LukeSavefrogs/setup-jython@v3
+        uses: ZZy979/setup-jython@fix-java-version
         with:
           jython-version: '2.7.3'
+      - name: Find jython
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          (type env:path) -split ';'
+          dir ~/jython/bin
+          where jython
+          jython --version
+      - name: Install SWIG
+        if: runner.os == 'macOS'
+        run: brew install swig
+      - name: Setup MSVC and C# Compiler
+        if: runner.os == 'Windows'
+        uses: seanmiddleditch/gha-setup-vsdevenv@master
+        with:
+          components: Microsoft.VisualStudio.Component.VC.Tools.x86.x64;Microsoft.VisualStudio.Component.Roslyn.Compiler
       - name: Run test
         run: python -m unittest -v

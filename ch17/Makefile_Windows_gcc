@@ -1,0 +1,28 @@
+# all: JythonTest.class IronPythonTest.dll _palindrome.so palindrome.so
+all: JythonTest.class IronPythonTest.dll
+
+%.class: %.java
+	javac $<
+
+IronPythonTest.dll: IronPythonTest.cs
+	csc /t:library $<
+
+palindrome_wrap.c: palindrome.i
+	swig -python $<
+
+palindrome.o: palindrome.c
+	gcc -fPIC -c $<
+
+palindrome_wrap.o: palindrome_wrap.c
+	gcc -fPIC -c -I$(python_include_dir) $<
+
+_palindrome.so: palindrome.o palindrome_wrap.o
+	gcc -shared $^ -o $@
+
+palindrome.so: palindrome2.c
+	gcc -fPIC -shared -I$(python_include_dir) $< -o $@
+
+clean:
+	del *.class *.dll *.o palindrome_wrap.c palindrome.py _palindrome.so palindrome.so
+
+.PHONY: all clean
