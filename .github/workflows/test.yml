@@ -33,6 +33,11 @@ jobs:
         run: |
           script\Install-Jython.ps1
           "$HOME\jython\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+      - name: Install IronPython (Windows)
+        if: runner.os == 'Windows'
+        run: |
+          script\Install-IronPython.ps1
+          "$HOME\IronPython\net462" | Out-File -FilePath $env:GITHUB_PATH -Append
       - name: Install SWIG
         if: runner.os == 'macOS'
         run: brew install swig
