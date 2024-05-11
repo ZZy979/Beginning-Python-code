@@ -5,10 +5,22 @@
 * 源代码：<https://github.com/Apress/beginning-python-3ed>
 * 笔记：<https://zzy979.github.io/posts/python-note-index/>
 
-# 安装依赖
+# 依赖
+Python 3.11
+
+安装Python依赖库：
+
 ```shell
 pip install -r requirements.txt
 ```
+
+第17章代码还依赖以下软件：
+* JDK 8
+* Jython 2.7.3
+* C#编译器
+* IronPython 3.4.1
+* SWIG 4.2.1
+* GCC编译器(Linux)或MSVC编译器(Windows)
 
 # 单元测试
 在项目根目录下执行：
