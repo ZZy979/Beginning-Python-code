@@ -36,6 +36,12 @@ class Ch17Tests(test_utils.TestCase):
         result = self.run_cmd('jython jython_test.py'.split())
         self.assertEqual('Hello, world!\n', result.stdout)
 
+    @unittest.skipUnless(platform.system() == 'Windows', 'IronPython requires Windows')
+    def test_iron_python(self):
+        os.environ['IRONPYTHONPATH'] = str(self.src_dir)
+        result = self.run_cmd('ipy ipy_test.py'.split())
+        self.assertEqual('Hello, world!\n', result.stdout)
+
     def test_palindrome(self):
         from _palindrome import is_palindrome
         self.assertEqual(1, is_palindrome('ipreferpi'))
@@ -58,21 +64,17 @@ class Ch17TestsMacOS(Ch17Tests):
     makefile = 'Makefile_macOS'
 
 
+@unittest.skipUnless(platform.system() == 'Windows', 'requires Windows')
 class Ch17TestsWindows(Ch17Tests):
     make_cmd = 'mingw32-make'
+    makefile = 'Makefile_Windows'
 
     @classmethod
     def setUpClass(cls):
-        if cls is Ch17TestsWindows:
-            raise unittest.SkipTest('Base class')
+        os.environ['python_lib_dir'] = sys.prefix + r'\libs'
         super().setUpClass()
 
-    def test_iron_python(self):
-        os.environ['IRONPYTHONPATH'] = str(self.src_dir)
-        result = self.run_cmd('ipy ipy_test.py'.split())
-        self.assertEqual('Hello, world!\n', result.stdout)
-
-
-@unittest.skipUnless(platform.system() == 'Windows', 'requires Windows')
-class Ch17TestsWindowsGcc(Ch17TestsWindows):
-    makefile = 'Makefile_Windows_gcc'
+    @classmethod
+    def tearDownClass(cls):
+        del os.environ['python_lib_dir']
+        super().tearDownClass()

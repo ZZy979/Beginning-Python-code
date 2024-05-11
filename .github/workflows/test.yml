@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
@@ -23,28 +23,40 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Install Jython (Linux and macOS)
-        if: runner.os != 'Windows'
+      - name: Install Jython
         run: |
           script/install_jython.sh
           echo ~/jython/bin >> $GITHUB_PATH
-      - name: Install Jython (Windows)
-        if: runner.os == 'Windows'
-        run: |
-          script\Install-Jython.ps1
-          "$HOME\jython\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
-      - name: Install IronPython (Windows)
-        if: runner.os == 'Windows'
-        run: |
-          script\Install-IronPython.ps1
-          "$HOME\IronPython\net462" | Out-File -FilePath $env:GITHUB_PATH -Append
       - name: Install SWIG
         if: runner.os == 'macOS'
         run: brew install swig
+      - name: Run test
+        run: python -m unittest -v
+
+  unit-test-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Install Jython
+        run: |
+          script\Install-Jython.ps1
+          "$HOME\jython\bin" | Out-File -FilePath $env:GITHUB_PATH -Append
+      - name: Install IronPython
+        run: |
+          script\Install-IronPython.ps1
+          "$HOME\IronPython\net462" | Out-File -FilePath $env:GITHUB_PATH -Append
       - name: Setup MSVC and C# Compiler
-        if: runner.os == 'Windows'
         uses: seanmiddleditch/gha-setup-vsdevenv@master
         with:
           components: Microsoft.VisualStudio.Component.VC.Tools.x86.x64;Microsoft.VisualStudio.Component.Roslyn.Compiler
       - name: Run test
+        shell: cmd
         run: python -m unittest -v
