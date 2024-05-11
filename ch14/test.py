@@ -51,7 +51,7 @@ class Ch14Tests(test_utils.TestCase):
     def test_select_server(self):
         self._test_logger_server('select_server.py')
 
-    @unittest.skipIf(platform.system() == 'Windows', "poll doesn't work in Windows")
+    @unittest.skipIf(platform.system() == 'Windows', "poll doesn't work on Windows")
     def test_poll_server(self):
         self._test_logger_server('poll_server.py')
 

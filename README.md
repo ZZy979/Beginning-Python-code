@@ -14,8 +14,6 @@ pip install -r requirements.txt
 在项目根目录下执行：
 
 ```shell
-export PYTHONUNBUFFERED=1
-export PYTHONIOENCODING=UTF-8
 python -m unittest
 ```
 
@@ -136,6 +134,6 @@ python -m unittest
 * [代码清单17-1 一个简单的Java类](ch17/JythonTest.java)
 * [代码清单17-2 一个简单的C#类](ch17/IronPythonTest.cs)
 * [代码清单17-3 检测回文的C语言函数](ch17/palindrome.c)
-* [代码清单17-4 检测回文的Python函数](ch17/palindrome.py)
+* [代码清单17-4 检测回文的Python函数](ch17/palindrome_pure.py)
 * [代码清单17-5 回文库的接口文件](ch17/palindrome.i)
 * [代码清单17-6 检测回文2](ch17/palindrome2.c)

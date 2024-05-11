@@ -23,6 +23,11 @@ class TestCase(unittest.TestCase):
     def testdata_dir(self):
         return self.src_dir / 'testdata'
 
+    @classmethod
+    def setUpClass(cls):
+        os.environ['PYTHONUNBUFFERED'] = '1'
+        os.environ['PYTHONIOENCODING'] = 'UTF-8'
+
     def assertScriptOutput(
             self, script, args='', input=None, input_file=None, subproc=True,
             prompt=None, output=None, output_file=None):

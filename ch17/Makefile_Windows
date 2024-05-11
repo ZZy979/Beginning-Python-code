@@ -1,0 +1,27 @@
+all: JythonTest.class IronPythonTest.dll _palindrome.pyd palindrome.pyd
+
+%.class: %.java
+	javac $<
+
+IronPythonTest.dll: IronPythonTest.cs
+	csc /t:library $<
+
+palindrome_wrap.c: palindrome.i
+	swig -python $<
+
+palindrome.obj: palindrome.c
+	cl /c $<
+
+palindrome_wrap.obj: palindrome_wrap.c
+	cl /c /I$(PYTHON_INCLUDE_DIR) $<
+
+_palindrome.pyd: palindrome.obj palindrome_wrap.obj
+	cl /LD $^ /link /LIBPATH:$(PYTHON_LIB_DIR) /OUT:$@
+
+palindrome.pyd: palindrome2.c
+	cl /LD /I$(PYTHON_INCLUDE_DIR) $< /link /LIBPATH:$(PYTHON_LIB_DIR) /OUT:$@
+
+clean:
+	del *.class *.pyd *.dll *.lib *.exp *.obj palindrome_wrap.c palindrome.py
+
+.PHONY: all clean

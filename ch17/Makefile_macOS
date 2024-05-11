@@ -1,0 +1,24 @@
+all: JythonTest.class _palindrome.so palindrome.so
+
+%.class: %.java
+	javac $<
+
+palindrome_wrap.c: palindrome.i
+	swig -python $<
+
+palindrome.o: palindrome.c
+	gcc -dynamic -c $<
+
+palindrome_wrap.o: palindrome_wrap.c
+	gcc -dynamic -c -I$(python_include_dir) $<
+
+_palindrome.so: palindrome.o palindrome_wrap.o
+	gcc -dynamiclib $^ -o $@ -Wl,-undefined,dynamic_lookup
+
+palindrome.so: palindrome2.c
+	gcc -dynamiclib -I$(python_include_dir) $< -o $@ -Wl,-undefined,dynamic_lookup
+
+clean:
+	rm -f *.class *.o palindrome_wrap.c palindrome.py _palindrome.so palindrome.so
+
+.PHONY: all clean
