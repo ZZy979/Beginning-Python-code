@@ -10,3 +10,8 @@ __pycache__/
 
 # Jython
 .jython_cache/
+
+# Setuptools
+build/
+dist/
+*.egg-info/

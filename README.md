@@ -149,3 +149,9 @@ python -m unittest
 * [代码清单17-4 检测回文的Python函数](ch17/palindrome_pure.py)
 * [代码清单17-5 回文库的接口文件](ch17/palindrome.i)
 * [代码清单17-6 检测回文2](ch17/palindrome2.c)
+
+## 第18章 程序打包
+* [代码清单18-1 简单的Setuptools安装脚本](ch18/hello/setup.py)
+* [palindrome安装脚本](ch18/palindrome2/setup.py)
+* [使用SWIG的palindrome安装脚本](ch18/palindrome/setup.py)
+* [py2exe安装脚本](ch18/hello2/setup.py)
