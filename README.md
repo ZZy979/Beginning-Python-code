@@ -6,14 +6,16 @@
 * 笔记：<https://zzy979.github.io/posts/python-note-index/>
 
 # 依赖
+## Python版本
 Python 3.11
 
-安装Python依赖库：
+## Python依赖库
 
 ```shell
 pip install -r requirements.txt
 ```
 
+## 其他依赖
 第17章代码还依赖以下软件：
 * JDK 8
 * Jython 2.7.3

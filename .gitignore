@@ -2,6 +2,14 @@
 __pycache__/
 *.py[cod]
 
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
 # PyCharm
 /.idea/
 
@@ -10,8 +18,3 @@ __pycache__/
 
 # Jython
 .jython_cache/
-
-# Setuptools
-build/
-dist/
-*.egg-info/
