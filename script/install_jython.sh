@@ -6,5 +6,5 @@ install_dir=$HOME/jython
 
 cd /tmp
 wget $url
-java -jar $jar_file -s -d $install_dir
+java -jar $jar_file -s -d $install_dir -t minimum
 rm $jar_file
