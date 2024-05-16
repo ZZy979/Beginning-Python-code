@@ -1,0 +1,2 @@
+Welcome to the area calculation program!
+Please enter the radius: The area is 12.566370614359172

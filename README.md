@@ -157,3 +157,8 @@ python -m unittest
 * [palindrome安装脚本](ch18/palindrome2/setup.py)
 * [使用SWIG的palindrome安装脚本](ch18/palindrome/setup.py)
 * [py2exe安装脚本](ch18/hello2/setup.py)
+
+## 第19章 有趣的编程
+* [代码清单19-1 一个简单的配置文件](ch19/area.ini)
+* [代码清单19-2 使用configparser的程序](ch19/config_example.py)
+* [代码清单19-3 使用logging模块的程序](ch19/logging_example.py)
