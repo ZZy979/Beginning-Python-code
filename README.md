@@ -168,8 +168,18 @@ python -m unittest
 * [代码清单20-1 示例纯文本文档](ch20/test_input.txt)
 * [代码清单20-2 文本块生成器](ch20/util.py)
 * [代码清单20-3 简单的标记程序](ch20/simple_markup.py)
+
+### 再次实现
 * [代码清单20-4 处理器](ch20/handlers.py)
 * [代码清单20-5 规则](ch20/rules.py)
 * [代码清单20-6 主程序](ch20/markup.py)
 
+## 第21章 项目2：画幅好画
+* [代码清单21-1 一个简单的ReportLab程序](ch21/hello_report.py)
+* [绘制折线](ch21/draw_polyline.py)
+
+### 初次实现
+* [代码清单21-2 太阳黑子图形程序的原型](ch21/sunspots_proto.py)
+
 ### 再次实现
+* [代码清单21-3 最终的太阳黑子程序](ch21/sunspots.py)

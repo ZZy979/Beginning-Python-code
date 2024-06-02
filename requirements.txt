@@ -1,5 +1,6 @@
 beautifulsoup4>=4.12.3
 Flask>=3.0.3
 py2exe>=0.13.0 ; sys_platform == 'win32'
+reportlab>=4.2.0
 requests>=2.31.0
 Twisted>=24.3.0
