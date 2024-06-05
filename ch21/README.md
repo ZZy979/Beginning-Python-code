@@ -16,4 +16,4 @@ $ python sunspots.py
 ```
 
 ## 截图
-![生成的网页](https://github.com/ZZy979/zzy979.github.io/blob/main/assets/images/python-note-ch21-project-2-painting-a-pretty-picture/最终的太阳黑子图.png?raw=true)
+![最终的太阳黑子图](screenshots/最终的太阳黑子图.png)

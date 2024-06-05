@@ -15,8 +15,8 @@
 ## 运行
 
 ```shell
-$ python markup.py < test_input.txt > test_output.html
+$ python markup.py < testdata/test_input.txt > testdata/test_output.html
 ```
 
 ## 截图
-![生成的网页](https://github.com/ZZy979/zzy979.github.io/blob/main/assets/images/python-note-ch20-project-1-instant-markup/再次尝试生成的网页.png?raw=true)
+![生成的网页](screenshots/再次尝试生成的网页.png)
