@@ -184,3 +184,14 @@ python -m unittest
 
 ### 再次实现
 * [代码清单21-3 最终的太阳黑子程序](ch21/sunspots.py)
+
+## 第22章 项目3：万能的XML
+* [代码清单22-1 表示简单网站的XML文件](ch22/website.xml)
+* [测试解析器](ch22/test_handler.py)
+* [标题解析器](ch22/headline_handler.py)
+
+### 初次实现
+* [代码清单22-2 简单的页面创建脚本](ch22/pagemaker.py)
+
+### 再次实现
+* [代码清单22-3 网站生成器](ch22/website.py)
