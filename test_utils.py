@@ -108,7 +108,7 @@ class TestCase(unittest.TestCase):
                 patch('sys.stdin', stdin) as stdin, \
                 patch('sys.stdout', new_callable=StringIO) as stdout, \
                 patch('sys.stderr', new_callable=StringIO) as stderr:
-            runpy.run_path(self.get_cwd(cwd) / script)
+            runpy.run_path(self.get_cwd(cwd) / script, run_name='__main__')
             stdin.close()
             return CompletedProcess(args, 0, stdout.getvalue(), stderr.getvalue())
 
