@@ -202,3 +202,15 @@ python -m unittest
 
 ### 再次实现
 * [代码清单23-2 更灵活的新闻收集代理](ch23/newsagent2.py)
+
+## 第24章 项目5：虚拟茶话会
+* [代码清单24-1 极简服务器程序](ch24/minimal_chat_server.py)
+* [代码清单24-2 能够接受连接的服务器](ch24/chat_server_accept_connections.py)
+* [代码清单24-3 包含清理代码的基本服务器](ch24/chat_server_with_cleanup.py)
+* [代码清单24-4 包含ChatSession类的服务器程序](ch24/chat_server_with_session.py)
+
+### 初次实现
+* [代码清单24-5 简单的聊天服务器](ch24/simple_chat.py)
+
+### 再次实现
+* [代码清单24-6 稍复杂些的聊天服务器](ch24/chatserver.py)
