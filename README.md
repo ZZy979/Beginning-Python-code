@@ -214,3 +214,12 @@ python -m unittest
 
 ### 再次实现
 * [代码清单24-6 稍复杂些的聊天服务器](ch24/chatserver.py)
+
+## 第25章 项目6：使用CGI进行远程编辑
+### 初次实现
+* [代码清单25-1 简单的Web编辑器](ch25/cgi-bin/simple_edit.cgi)
+
+### 再次实现
+* [首页](ch25/index.html)
+* [代码清单25-2 编辑器脚本](ch25/cgi-bin/edit.cgi)
+* [代码清单25-3 保存脚本](ch25/cgi-bin/save.cgi)
