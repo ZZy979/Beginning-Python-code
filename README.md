@@ -223,3 +223,18 @@ python -m unittest
 * [首页](ch25/index.html)
 * [代码清单25-2 编辑器脚本](ch25/cgi-bin/edit.cgi)
 * [代码清单25-3 保存脚本](ch25/cgi-bin/save.cgi)
+
+## 第26章 项目7：自建公告板
+* [代码清单26-1 在PostgreSQL中创建数据库](ch26/create_table_pg.sql)
+* [代码清单26-2 在MySQL中创建数据库](ch26/create_table_mysql.sql)
+* [代码清单26-3 在SQLite中创建数据库](ch26/create_table_sqlite.sql)
+* [添加消息](ch26/addmessage.py)
+
+### 初次实现
+* [代码清单26-4 公告板主页](ch26/cgi-bin/simple_main.cgi)
+
+### 再次实现
+* [代码清单26-5 公告板主页](ch26/cgi-bin/main.cgi)
+* [代码清单26-6 消息查看器](ch26/cgi-bin/view.cgi)
+* [代码清单26-7 消息编辑器](ch26/cgi-bin/edit.cgi)
+* [代码清单26-8 保存脚本](ch26/cgi-bin/save.cgi)

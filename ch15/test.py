@@ -8,6 +8,14 @@ import test_utils
 class Ch15Tests(test_utils.TestCase):
     dirname = 'ch15'
 
+    def setUp(self):
+        super().setUp()
+        self.setUpCGI()
+
+    def tearDown(self):
+        super().tearDown()
+        self.tearDownCGI()
+
     def _test_python_jobs_crawler(self, script):
         from unittest.mock import patch
 
@@ -26,23 +34,10 @@ class Ch15Tests(test_utils.TestCase):
         self._test_python_jobs_crawler('scrape_python_jobs_bs.py')
 
     def test_cgi_scripts(self):
-        import os, platform, shutil, unittest
+        import platform, unittest
 
         if platform.system() == 'Darwin':
             raise unittest.SkipTest('macOS: Connection reset by peer')  # TODO solve this
-
-        cgi_bin_dir = self.src_dir / 'cgi-bin'
-        for script in cgi_bin_dir.glob('*.cgi'):
-            script.chmod(0o755)
-
-        if platform.system() == 'Windows':
-            # Windows doesn't support .cgi suffix
-            for script in cgi_bin_dir.glob('*.cgi'):
-                shutil.copyfile(script, script.with_suffix('.py'))
-            with open(cgi_bin_dir / 'simple3.py', 'r+', encoding='utf-8') as f:
-                content = f.read()
-                f.seek(0)
-                f.write(content.replace('.cgi', '.py'))
 
         def _run_cgi_scripts():
             test_cases = [
@@ -53,35 +48,28 @@ class Ch15Tests(test_utils.TestCase):
                 ('simple3_1', 'simple3', None),
                 ('simple3_2', 'simple3', {'name': 'Mr. Gumby'}),
             ]
-            base_url = 'http://localhost:8000/cgi-bin/'
-            suffix = '.py' if platform.system() == 'Windows' else '.cgi'
+            base_url = 'http://localhost:8000/cgi-bin'
             with ThreadPoolExecutor() as executor:
                 client_futures = {
-                    name: executor.submit(requests.get, base_url + cgi_script + suffix, params)
+                    name: executor.submit(requests.get, f'{base_url}/{cgi_script}{self.cgi_suffix}', params)
                     for name, cgi_script, params in test_cases
                 }
                 return {name: f.result().text for name, f in client_futures.items()}
 
-        try:
-            _, _, result = self.run_server_script('cgi_server.py', wait_time=2, client_func=_run_cgi_scripts)
-            self.assertIn('Hello, world!', result['simple1'])
-            self.assertIn('ZeroDivisionError', result['faulty'])
-            self.assertIn('Hello, world!', result['simple2_1'])
-            self.assertIn('Hello, Gumby!', result['simple2_2'])
-            self.assertIn('Hello, world!', result['simple3_1'])
-            self.assertIn('Hello, Mr. Gumby!', result['simple3_2'])
-        finally:
-            if platform.system() == 'Windows':
-                # cleanup
-                for script in cgi_bin_dir.glob('*.py'):
-                    os.remove(script)
+        _, _, result = self.run_server_script('cgi_server.py', wait_time=2, client_func=_run_cgi_scripts)
+        self.assertIn('Hello, world!', result['simple1'])
+        self.assertIn('ZeroDivisionError', result['faulty'])
+        self.assertIn('Hello, world!', result['simple2_1'])
+        self.assertIn('Hello, Gumby!', result['simple2_2'])
+        self.assertIn('Hello, world!', result['simple3_1'])
+        self.assertIn('Hello, Mr. Gumby!', result['simple3_2'])
 
     def test_powers(self):
         def _clients():
             test_cases = [3, 10, 1, 0, -1, 'abc', '']
-            base_url = 'http://localhost:5000/powers/'
+            base_url = 'http://localhost:5000/powers'
             with ThreadPoolExecutor() as executor:
-                client_futures = {n: executor.submit(requests.get, base_url + str(n)) for n in test_cases}
+                client_futures = {n: executor.submit(requests.get, f'{base_url}/{n}') for n in test_cases}
                 return {n: f.result().text for n, f in client_futures.items()}
 
         _, _, results = self.run_server_cmd('flask --app powers run'.split(), client_func=_clients)

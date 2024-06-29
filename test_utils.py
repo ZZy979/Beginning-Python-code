@@ -1,5 +1,6 @@
 import os
 import pathlib
+import platform
 import runpy
 import shlex
 import subprocess
@@ -23,10 +24,33 @@ class TestCase(unittest.TestCase):
     def testdata_dir(self):
         return self.src_dir / 'testdata'
 
+    @property
+    def cgi_bin_dir(self):
+        return self.src_dir / 'cgi-bin'
+
+    @property
+    def cgi_suffix(self):
+        return '.py' if platform.system() == 'Windows' else '.cgi'
+
     @classmethod
     def setUpClass(cls):
         os.environ['PYTHONUNBUFFERED'] = '1'
         os.environ['PYTHONIOENCODING'] = 'UTF-8'
+
+    def setUpCGI(self):
+        """准备CGI脚本测试。"""
+        for script in self.cgi_bin_dir.glob('*.cgi'):
+            script.chmod(0o755)
+            if platform.system() == 'Windows':
+                # Windows doesn't support .cgi suffix
+                with open(script) as cgi, open(script.with_suffix('.py'), 'w') as py:
+                    py.write(cgi.read().replace('.cgi', '.py'))
+
+    def tearDownCGI(self):
+        """清理CGI脚本测试。"""
+        if platform.system() == 'Windows':
+            for script in self.cgi_bin_dir.glob('*.py'):
+                os.remove(script)
 
     def assertScriptOutput(
             self, script, args='', input=None, input_file=None, subproc=True,
