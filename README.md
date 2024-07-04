@@ -238,3 +238,11 @@ python -m unittest
 * [代码清单26-6 消息查看器](ch26/cgi-bin/view.cgi)
 * [代码清单26-7 消息编辑器](ch26/cgi-bin/edit.cgi)
 * [代码清单26-8 保存脚本](ch26/cgi-bin/save.cgi)
+
+## 第27章 项目8：使用XML-RPC进行文件共享
+### 初次实现
+* [代码清单27-1 简单的Node实现](ch27/simple_node.py)
+
+### 再次实现
+* [代码清单27-2 新的Node实现（服务器）](ch27/server.py)
+* [代码清单27-3 Node控制界面（客户端）](ch27/client.py)
