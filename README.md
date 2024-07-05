@@ -246,3 +246,10 @@ python -m unittest
 ### 再次实现
 * [代码清单27-2 新的Node实现（服务器）](ch27/server.py)
 * [代码清单27-3 Node控制界面（客户端）](ch27/client.py)
+
+## 第28章 项目9：文件共享2——GUI版本
+### 初次实现
+* [代码清单28-1 简单的GUI客户端](ch28/simple_guiclient.py)
+
+### 再次实现
+* [代码清单28-2 最终的GUI客户端](ch28/guiclient.py)

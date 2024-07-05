@@ -22,7 +22,7 @@
 $ python client.py urls.txt directory http://servername.com:4242
 ```
 
-其中directory是节点的共享文件目录，urls.txt包含所有节点的URL，每行一个。
+其中directory是节点的共享文件目录，urls.txt包含所有节点的URL，每行一个。可以（在同一台机器的不同端口或不同机器上）启动多个节点，启动前将它们的URL都放在urls.txt文件中即可。
 
 客户端支持的命令：
 
