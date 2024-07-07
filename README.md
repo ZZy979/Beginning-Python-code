@@ -253,3 +253,14 @@ python -m unittest
 
 ### 再次实现
 * [代码清单28-2 最终的GUI客户端](ch28/guiclient.py)
+
+## 第29章 项目10：自制街机游戏
+* [弹跳球动画](ch29/bouncing_ball.py)
+
+### 初次实现
+* [代码清单29-1 简单的“掉落秤砣”动画](ch29/weights.py)
+
+### 再次实现
+* [代码清单29-2 Squash游戏配置文件](ch29/config.py)
+* [代码清单29-3 Squash游戏对象](ch29/objects.py)
+* [代码清单29-4 游戏主模块](ch29/squish.py)
